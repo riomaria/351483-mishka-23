@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="page-header">
       <div class="page-container">
         <a class="logo" href="#">
@@ -28,7 +28,7 @@
               <a class="site__link site__link--search">Поиск по сайту</a>
             </li>
             <li class="site__item">
-              <a class="site__link site__link--basket">Корзина: <span class="site__link--value">пока пуста</span></a>
+              <a class="site__link site__link--basket">Корзина: <span>пока пуста</span></a>
             </li>
           </ul>
         </nav>
@@ -48,7 +48,7 @@
               <a class="promo__link promo__link--sales" href="#">Распродажа</a>
             </li>
             <li class="promo__item">
-              <span class="promo__delivery" href="#">Бесплатная доставка по России</span>
+              <span class="promo__delivery">Бесплатная доставка по России</span>
             </li>
           </ul>
           <div class="promo__offers">
@@ -208,7 +208,7 @@
           <h2 class="visually-hidden">Разработано HTMLacademy</h2>
           <p class="production__item">
             <span class="production__slogan">Разработано</span>
-            <a class="production__link" href="#">
+            <a class="production__link" href="https://htmlacademy.ru/intensive/adaptive">
               <span class="visually-hidden">HTMLacademy</span>
               <svg width="27" height="34">
   <!-- какой-то путь.. или спрайт-->
@@ -220,16 +220,16 @@
     </footer>
 
     <section class="modal modal-add">
-      <form class="modal-add__form" id="add-size" method="get" action="">
+      <form class="modal-add__form" id="add-size" method="get" action="https://echo.htmlacademy.ru">
         <h2 class="modal-add__title">Добавить в корзину</h2>
         <p class="modal-add__info">Выберете размер:</p>
         <div class="modal-add__inner">
-          <label class="visually-hidden" for="size-S">S</label>
-          <input class="modal-add__item" type="checkbox" name="size-small" placeholder="S" value="small" id="size-S" checked>
-          <label class="visually-hidden" for="size-M">M</label>
-          <input class="modal-add__item" type="checkbox" name="size-middle" placeholder="M" value="middle" id="size-M">
-          <label class="visually-hidden" for="size-L">L</label>
-          <input class="modal-add__item" type="checkbox" name="size-large" placeholder="L" value="large" id="size-L">
+          <label class="modal-add__suttitle" for="size-S">S</label>
+          <input class="modal-add__item" type="checkbox" name="size-small" value="small" id="size-S" checked>
+          <label class="modal-add__suttitle" for="size-M">M</label>
+          <input class="modal-add__item" type="checkbox" name="size-middle" value="middle" id="size-M">
+          <label class="modal-add__suttitle" for="size-L">L</label>
+          <input class="modal-add__item" type="checkbox" name="size-large" value="large" id="size-L">
         </div>
         <button class="modal-add__button" type="submit">Добавить</button>
       </form>
