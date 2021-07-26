@@ -8,30 +8,49 @@
   <body class="page-body">
     <header class="page-header">
       <div class="page-container">
-        <a class="logo" href="index.ru">
-          <svg class="logo__img" width="86" height="35"></svg>
-        </a>
-        <button class="menu-button menu-button--closed" type="button">
-          <span class="visually-hidden">Открыть/Закрыть меню</span>
-        </button>
-        <nav class="main-navigation main-navigation--closed site">
-          <ul class="site__list">
-            <li class="site__item">
-              <a class="site__link">Каталог товаров</a>
+        <div class="page-header__main-part">
+          <a class="logo" href="index.ru">
+            <svg class="logo__img" width="86" height="35"></svg>
+          </a>
+          <button class="menu-button menu-button--closed" type="button">
+            <span class="visually-hidden">Открыть/Закрыть меню</span>
+          </button>
+          <nav class="main-navigation main-navigation--closed">
+            <ul class="main-navigation__list">
+              <li class="main-navigation__item">
+                <a class="main-navigation__link">Каталог товаров</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="main-navigation__user-list">
+              <li class="main-navigation__item search">
+                <form class="search__form">
+                  <input class="search__field" type="text" name="user-query" id="user-search">
+                  <label class="visually-hidden" for="user-search">Найти</label>
+                  <button class="search__button" type="button">Поиск по сайту</button>
+                </form>
+              </li>
+              <li class="main-navigation__item basket">
+                <a class="main-navigation__link basket__link">Корзина: <span>пока пуста</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="page-header__add-part add-part">
+          <ul class="add-part__list">
+            <li class="add-part__item">
+              <a class="add-part__link add-part__link--new" href="#">Новые поступления</a>
             </li>
-            <li class="site__item">
-              <a class="site__link" href="form.html">Вязание на заказ</a>
+            <li class="add-part__item">
+              <a class="add-part__link add-part__link--sales" href="#">Распродажа</a>
+            </li>
+            <li class="add-part__item">
+              <span class="add-part__delivery">Бесплатная доставка по России</span>
             </li>
           </ul>
-          <ul class="site__user-list">
-            <li class="site__item">
-              <a class="site__link site__link--search">Поиск по сайту</a>
-            </li>
-            <li class="site__item">
-              <a class="site__link site__link--basket">Корзина: <span>пока пуста</span></a>
-            </li>
-          </ul>
-        </nav>
+        </div>
       </div>
     </header>
 
@@ -39,17 +58,6 @@
       <section class="promo">
         <div class="page-container">
           <h1 class="promo__title">Каталог товаров</h1>
-            <ul class="promo__list">
-              <li class="promo__item">
-                <a class="promo__link promo__link--new" href="#">Новые поступления</a>
-              </li>
-              <li class="promo__item">
-                <a class="promo__link promo__link--sales" href="#">Распродажа</a>
-              </li>
-              <li class="promo__item">
-                <span class="promo__delivery">Бесплатная доставка по России</span>
-              </li>
-            </ul>
           </div>
         </section>
 
@@ -75,7 +83,7 @@
                       <dd class="product__value">200 г</dd>
                     </dl>
                     <p class="product__price">1200 <span class="product__currency">руб.</span></p>
-                    <button class="product__button" type="button" aria-label="Добавить в корзину">Добавить в корзину</button>
+                    <button class="product__button" type="button">Добавить в корзину</button>
                   </div>
                 </article>
               </li>
@@ -97,7 +105,7 @@
                       <dd class="product__value">10 см</dd>
                     </dl>
                     <p class="product__price">690 <span class="product__currency">руб.</span></p>
-                    <button class="product__button" type="button" aria-label="Добавить в корзину">Добавить в корзину</button>
+                    <button class="product__button" type="button">Добавить в корзину</button>
                   </div>
                 </article>
               </li>
@@ -119,7 +127,7 @@
                       <dd class="product__value">30 см</dd>
                     </dl>
                     <p class="product__price">1500 <span class="product__currency">руб.</span></p>
-                    <button class="product__button" type="button" aria-label="Добавить в корзину">Добавить в корзину</button>
+                    <button class="product__button" type="button">Добавить в корзину</button>
                   </div>
                 </article>
               </li>
@@ -131,6 +139,7 @@
           <h2 class="video__title">Процесс производства</h2>
           <div class="video__wrapper">
             <img class="video__img" src="img/video.jpg" width="260" height="150" alt="Видеоролик о нашем производстве">
+            <button class="video__button" type="button">Начать воспроизведение</button>
           </div>
           <div class="video__inner">
             <p class="video__info">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -188,19 +197,19 @@
       </div>
     </footer>
 
-    <section class="modal modal-add">
-      <form class="modal-add__form" id="add-size" method="get" action="https://echo.htmlacademy.ru">
-        <h2 class="modal-add__title">Добавить в корзину</h2>
-        <p class="modal-add__info">Выберете размер:</p>
-        <div class="modal-add__inner">
-          <label class="modal-add__suttitle" for="size-S">S</label>
-          <input class="modal-add__item" type="checkbox" name="size-small" value="small" id="size-S" checked>
-          <label class="modal-add__suttitle" for="size-M">M</label>
-          <input class="modal-add__item" type="checkbox" name="size-middle" value="middle" id="size-M">
-          <label class="modal-add__suttitle" for="size-L">L</label>
-          <input class="modal-add__item" type="checkbox" name="size-large" value="large" id="size-L">
+    <section class="modal">
+      <form class="modal__form" id="add-size" method="get" action="https://echo.htmlacademy.ru">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__info">Выберете размер:</p>
+        <div class="modal__inner">
+          <label class="modal__suttitle" for="size-S">S</label>
+          <input class="modal__item" type="checkbox" name="size-small" value="small" id="size-S" checked>
+          <label class="modal__suttitle" for="size-M">M</label>
+          <input class="modal__item" type="checkbox" name="size-middle" value="middle" id="size-M">
+          <label class="modal__suttitle" for="size-L">L</label>
+          <input class="modal__item" type="checkbox" name="size-large" value="large" id="size-L">
         </div>
-        <button class="modal-add__button" type="submit">Добавить</button>
+        <button class="modal__button" type="submit">Добавить</button>
       </form>
     </section>
   </body>

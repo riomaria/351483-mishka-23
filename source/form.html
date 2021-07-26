@@ -8,30 +8,49 @@
   <body class="page-body">
     <header class="page-header">
       <div class="page-container">
-        <a class="logo" href="index.html">
-          <svg class="logo__img" width="86" height="35"></svg>
-        </a>
-        <button class="menu-button menu-button--closed" type="button">
-          <span class="visually-hidden">Открыть/Закрыть меню</span>
-        </button>
-        <nav class="main-navigation main-navigation--closed site">
-          <ul class="site__list">
-            <li class="site__item">
-              <a class="site__link" href="catalog.html">Каталог товаров</a>
+        <div class="page-header__main-part">
+          <a class="logo" href="index.html">
+            <svg class="logo__img" width="86" height="35"></svg>
+          </a>
+          <button class="menu-button menu-button--closed" type="button">
+            <span class="visually-hidden">Открыть/Закрыть меню</span>
+          </button>
+          <nav class="main-navigation main-navigation--closed">
+            <ul class="main-navigation__list">
+              <li class="main-navigation__item">
+                <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="main-navigation__user-list">
+              <li class="main-navigation__item search">
+                <form class="search__form">
+                  <input class="search__field" type="text" name="user-query" id="user-search">
+                  <label class="visually-hidden" for="user-search">Найти</label>
+                  <button class="search__button" type="button">Поиск по сайту</button>
+                </form>
+              </li>
+              <li class="main-navigation__item basket">
+                <a class="main-navigation__link basket__link">Корзина: <span>пока пуста</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="page-header__add-part add-part">
+          <ul class="add-part__list">
+            <li class="add-part__item">
+              <a class="add-part__link add-part__link--new" href="#">Новые поступления</a>
             </li>
-            <li class="site__item">
-              <a class="site__link">Вязание на заказ</a>
+            <li class="add-part__item">
+              <a class="add-part__link add-part__link--sales" href="#">Распродажа</a>
+            </li>
+            <li class="add-part__item">
+              <span class="add-part__delivery">Бесплатная доставка по России</span>
             </li>
           </ul>
-          <ul class="site__user-list">
-            <li class="site__item">
-              <a class="site__link site__link--search">Поиск по сайту</a>
-            </li>
-            <li class="site__item">
-              <a class="site__link site__link--basket">Корзина: <span>пока пуста</span></a>
-            </li>
-          </ul>
-        </nav>
+        </div>
       </div>
     </header>
 
@@ -39,30 +58,19 @@
       <section class="promo">
         <div class="page-container">
           <h1 class="promo__title">Вязание на заказ</h1>
-          <ul class="promo__list">
-            <li class="promo__item">
-              <a class="promo__link promo__link--new" href="#">Новые поступления</a>
-            </li>
-            <li class="promo__item">
-              <a class="promo__link promo__link--sales" href="#">Распродажа</a>
-            </li>
-            <li class="promo__item">
-              <span class="promo__delivery">Бесплатная доставка по России</span>
-            </li>
-          </ul>
         </div>
       </section>
 
-      <section class="blank-order">
+      <section class="list-order">
         <h2 class="visually-hidden">Бланк для заказа</h2>
-        <p class="blank-order__info">Мы будем рады воплотить в жизнь ваши пожелания!
+        <p class="list-order__info">Мы будем рады воплотить в жизнь ваши пожелания!
           Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="blank-order__form" id="order-form" method="post" action="https://echo.htmlacademy.ru">
-          <ul class="blank-order__list">
+        <form class="list-order__form" id="order-form" method="post" action="https://echo.htmlacademy.ru">
+          <ul class="list-order__list">
 
-            <li class="blank-order__item type-product">
-              <fieldset class="blank-order__wrapper">
-                <legend class="blank-order__title">Тип</legend>
+            <li class="list-order__item type-product">
+              <fieldset class="list-order__wrapper">
+                <legend class="list-order__title">Тип</legend>
                 <p class="type-product__inner">
                   <input class="type-product__item" type="radio" name="decor-thing" value="decor" id="decor-item" checked>
                   <label class="type-product__title" for="decor-item">Аксессуар для интерьера</label>
@@ -74,9 +82,9 @@
               </fieldset>
             </li>
 
-            <li class="blank-order__item color-product">
-              <fieldset class="blank-order__wrapper">
-                <legend class="blank-order__title">Цвет</legend>
+            <li class="list-order__item color-product">
+              <fieldset class="list-order__wrapper">
+                <legend class="list-order__title">Цвет</legend>
                 <ul class="color-product__list">
                   <li class="color-product__item">
                     <input class="color-product__checkbox" type="checkbox" name="white-color" value="white" id="white-paint" checked>
@@ -106,9 +114,9 @@
               </fieldset>
             </li>
 
-            <li class="blank-order__item user-info">
-              <fieldset class="blank-order__wrapper">
-                <legend class="blank-order__title">Фио</legend>
+            <li class="list-order__item user-info">
+              <fieldset class="list-order__wrapper">
+                <legend class="list-order__title">Фио</legend>
                 <ul class="user-info__list">
                   <li class="user-info__item">
                     <label class="user-info__title" for="user-name">Имя:</label>
@@ -126,38 +134,38 @@
               </fieldset>
             </li>
 
-            <li class="blank-order__item user-phone">
-              <fieldset class="blank-order__wrapper">
-                <legend class="blank-order__title">Тел</legend>
+            <li class="list-order__item user-phone">
+              <fieldset class="list-order__wrapper">
+                <legend class="list-order__title">Тел</legend>
                 <p class="user-phone__inner">
                   <input class="user-phone__date" type="number" name="user-phone" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-                  <label class="user-phone__icon" for="phone-number"></label>
+                  <label class="visually-hidden" for="phone-number">Ваш телефон</label>
                 </p>
               </fieldset>
             </li>
 
-            <li class="blank-order__item user-email">
-              <fieldset class="blank-order__wrapper">
-                <legend class="blank-order__title">E-mail</legend>
+            <li class="list-order__item user-email">
+              <fieldset class="list-order__wrapper">
+                <legend class="list-order__title">E-mail</legend>
                 <p class="user-email__inner">
                   <input class="user-email__date" type="email" name="user-email" id="email-address" placeholder="Ваш Email*" required>
-                  <label class="user-email__icon" for="email-address"></label>
+                  <label class="visually-hidden" for="email-address">Ваш E-mail адрес</label>
                 </p>
               </fieldset>
             </li>
 
-            <li class="blank-order__item user-addition">
-              <fieldset class="blank-order__wrapper">
-                <legend class="blank-order__title">Доп</legend>
+            <li class="list-order__item user-addition">
+              <fieldset class="list-order__wrapper">
+                <legend class="list-order__title">Доп</legend>
                 <p class="user-addition__inner">
                   <textarea class="user-addition__text" name="user-addition" placeholder="Опишите все ваши пожелания к заказу"></textarea>
                 </p>
               </fieldset>
             </li>
           </ul>
-          <div class="blank-order__footer">
-            <p class="blank-order__footnote"><sup class="blank-order__icon-asterisk">*</sup>Поля обязательны для заполнения</p>
-            <button class="blank-order__button" type="submit">Отправить заказ</button>
+          <div class="list-order__footer">
+            <p class="list-order__footnote"><sup class="list-order__icon-asterisk">*</sup>Поля обязательны для заполнения</p>
+            <button class="list-order__button" type="submit">Отправить заказ</button>
           </div>
         </form>
       </section>
