@@ -65,103 +65,90 @@
         <p class="list-order__info">Мы будем рады воплотить в жизнь ваши пожелания!
           Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="list-order__form" id="order-form" method="post" action="https://echo.htmlacademy.ru">
-          <ul class="list-order__list">
 
-            <li class="list-order__item type-product">
-              <fieldset class="list-order__wrapper">
-                <legend class="list-order__title">Тип</legend>
-                <p class="type-product__inner">
-                  <input class="type-product__item" type="radio" name="decor-thing" value="decor" id="decor-item" checked>
-                  <label class="type-product__title" for="decor-item">Аксессуар для интерьера</label>
-                </p>
-                <p class="type-product__inner">
-                  <input class="type-product__item" type="radio" name="toy-thing" value="toy" id="toy-item">
-                  <label class="type-product__title" for="toy-item">Детская игрушка</label>
-                </p>
-              </fieldset>
-            </li>
+          <fieldset class="list-order__wrapper type-product">
+            <legend class="list-order__title">Тип</legend>
+            <p class="type-product__inner">
+              <input class="type-product__item" type="radio" name="decor-thing" value="decor" id="decor-item" checked>
+              <label class="type-product__title" for="decor-item">Аксессуар для интерьера</label>
+            </p>
+            <p class="type-product__inner">
+              <input class="type-product__item" type="radio" name="toy-thing" value="toy" id="toy-item">
+              <label class="type-product__title" for="toy-item">Детская игрушка</label>
+            </p>
+          </fieldset>
 
-            <li class="list-order__item color-product">
-              <fieldset class="list-order__wrapper">
-                <legend class="list-order__title">Цвет</legend>
-                <ul class="color-product__list">
-                  <li class="color-product__item">
-                    <input class="color-product__checkbox" type="checkbox" name="white-color" value="white" id="white-paint" checked>
-                    <label class="color-product__title" for="white-paint">Белый</label>
-                  </li>
-                  <li class="color-product__item">
-                    <input class="color-product__checkbox" type="checkbox" name="grey-color" value="grey" id="grey-paint" checked>
-                    <label class="color-product__title" for="grey-paint">Серый</label>
-                  </li>
-                  <li class="color-product__item">
-                    <input class="color-product__checkbox" type="checkbox" name="tiffany-color" value="tiffany" id="tiffany-paint">
-                    <label class="color-product__title" for="tiffany-paint">&laquo;Тиффани&raquo;</label>
-                  </li>
-                  <li class="color-product__item">
-                    <input class="color-product__checkbox" type="checkbox" name="black-color" value="black" id="black-paint">
-                    <label class="color-product__title" for="black-paint">Черный</label>
-                  </li>
-                  <li class="color-product__item">
-                    <input class="color-product__checkbox" type="checkbox" name="pink-color" value="pink" id="pink-paint">
-                    <label class="color-product__title" for="pink-paint">Розовый</label>
-                  </li>
-                  <li class="color-product__item">
-                    <input class="color-product__checkbox" type="checkbox" name="orange-color" value="orange" id="orange-paint">
-                    <label class="color-product__title" for="orange-paint">Оранжевый</label>
-                  </li>
-                </ul>
-              </fieldset>
-            </li>
+          <fieldset class="list-order__wrapper color-product">
+            <legend class="list-order__title">Цвет</legend>
+            <ul class="color-product__list">
+              <li class="color-product__item">
+                <input class="color-product__checkbox" type="checkbox" name="white-color" value="white" id="white-paint" checked>
+                <label class="color-product__title" for="white-paint">Белый</label>
+              </li>
+              <li class="color-product__item">
+                <input class="color-product__checkbox" type="checkbox" name="grey-color" value="grey" id="grey-paint" checked>
+                <label class="color-product__title" for="grey-paint">Серый</label>
+              </li>
+              <li class="color-product__item">
+                <input class="color-product__checkbox" type="checkbox" name="tiffany-color" value="tiffany" id="tiffany-paint">
+                <label class="color-product__title" for="tiffany-paint">&laquo;Тиффани&raquo;</label>
+              </li>
+              <li class="color-product__item">
+                <input class="color-product__checkbox" type="checkbox" name="black-color" value="black" id="black-paint">
+                <label class="color-product__title" for="black-paint">Черный</label>
+              </li>
+              <li class="color-product__item">
+                <input class="color-product__checkbox" type="checkbox" name="pink-color" value="pink" id="pink-paint">
+                <label class="color-product__title" for="pink-paint">Розовый</label>
+              </li>
+              <li class="color-product__item">
+                <input class="color-product__checkbox" type="checkbox" name="orange-color" value="orange" id="orange-paint">
+                <label class="color-product__title" for="orange-paint">Оранжевый</label>
+              </li>
+            </ul>
+          </fieldset>
 
-            <li class="list-order__item user-info">
-              <fieldset class="list-order__wrapper">
-                <legend class="list-order__title">Фио</legend>
-                <ul class="user-info__list">
-                  <li class="user-info__item">
-                    <label class="user-info__title" for="user-name">Имя:</label>
-                    <input class="user-info__text" type="text" name="order__username" id="user-name" placeholder="Введите ваше имя*" required>
-                  </li>
-                  <li class="user-info__item">
-                    <label class="user-info__title" for="user-lastname">Фамилия:</label>
-                    <input class="user-info__text" type="text" name="order__user-lastname" id="user-lastname" placeholder="Укажите фамилию*" required>
-                  </li>
-                  <li class="user-info__item">
-                    <label class="user-info__title" for="user-midname">Отчество:</label>
-                    <input class="user-info__text" type="text" name="order__user-midname" id="user-midname" placeholder="Отчество, если желаете">
-                  </li>
-                </ul>
-              </fieldset>
-            </li>
+          <fieldset class="list-order__wrapper user-info">
+            <legend class="list-order__title">Фио</legend>
+            <ul class="user-info__list">
+              <li class="user-info__item">
+                <label class="user-info__title" for="user-name">Имя:</label>
+                <input class="user-info__text" type="text" name="order__username" id="user-name" placeholder="Введите ваше имя*" required>
+              </li>
+              <li class="user-info__item">
+                <label class="user-info__title" for="user-lastname">Фамилия:</label>
+                <input class="user-info__text" type="text" name="order__user-lastname" id="user-lastname" placeholder="Укажите фамилию*" required>
+              </li>
+              <li class="user-info__item">
+                <label class="user-info__title" for="user-midname">Отчество:</label>
+                <input class="user-info__text" type="text" name="order__user-midname" id="user-midname" placeholder="Отчество, если желаете">
+              </li>
+            </ul>
+          </fieldset>
 
-            <li class="list-order__item user-phone">
-              <fieldset class="list-order__wrapper">
-                <legend class="list-order__title">Тел</legend>
-                <p class="user-phone__inner">
-                  <input class="user-phone__date" type="number" name="user-phone" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-                  <label class="visually-hidden" for="phone-number">Ваш телефон</label>
-                </p>
-              </fieldset>
-            </li>
+          <fieldset class="list-order__wrapper user-phone">
+            <legend class="list-order__title">Тел</legend>
+            <p class="user-phone__inner">
+              <input class="user-phone__date" type="number" name="user-phone" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+              <label class="visually-hidden" for="phone-number">Ваш телефон</label>
+            </p>
+          </fieldset>
 
-            <li class="list-order__item user-email">
-              <fieldset class="list-order__wrapper">
-                <legend class="list-order__title">E-mail</legend>
-                <p class="user-email__inner">
-                  <input class="user-email__date" type="email" name="user-email" id="email-address" placeholder="Ваш Email*" required>
-                  <label class="visually-hidden" for="email-address">Ваш E-mail адрес</label>
-                </p>
-              </fieldset>
-            </li>
+          <fieldset class="list-order__wrapper user-email">
+            <legend class="list-order__title">E-mail</legend>
+            <p class="user-email__inner">
+              <input class="user-email__date" type="email" name="user-email" id="email-address" placeholder="Ваш Email*" required>
+              <label class="visually-hidden" for="email-address">Ваш E-mail адрес</label>
+            </p>
+          </fieldset>
 
-            <li class="list-order__item user-addition">
-              <fieldset class="list-order__wrapper">
-                <legend class="list-order__title">Доп</legend>
-                <p class="user-addition__inner">
-                  <textarea class="user-addition__text" name="user-addition" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-                </p>
-              </fieldset>
-            </li>
-          </ul>
+          <fieldset class="list-order__wrapper user-addition">
+            <legend class="list-order__title">Доп</legend>
+            <p class="user-addition__inner">
+              <textarea class="user-addition__text" name="user-addition" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </p>
+          </fieldset>
+
           <div class="list-order__footer">
             <p class="list-order__footnote"><sup class="list-order__icon-asterisk">*</sup>Поля обязательны для заполнения</p>
             <button class="list-order__button" type="submit">Отправить заказ</button>
