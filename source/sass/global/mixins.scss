@@ -1,0 +1,65 @@
+@mixin image-basic() {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@mixin reset-indent() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-decoration() {
+  text-decoration: none;
+}
+
+@mixin reset-style-link {
+  text-decoration: none;
+}
+
+@mixin font-basic ($size: $font-size--small, $line-height: $line-height--basic, $color: $basic-dark, $weight: $weight-normal, $style: $style-normal) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin font-heading ($size: $font-size--big, $line-height: $line-height--large, $color: $basic-black, $weight: $weight-bold, $style: $style-normal) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin font-heading-basic ($size: $font-size--basic, $line-height: $line-height--basic, $color: $basic-black, $weight: $weight-bold, $style: $style-normal) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin font-accent ($size: $font-size--basic, $line-height: $line-height--petty, $color: $basic-accent, $weight: $weight-bold, $style: $style-normal) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+  text-transform: uppercase;
+}
+
+@mixin site-wrapper() {
+  padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+}

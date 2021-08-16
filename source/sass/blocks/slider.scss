@@ -1,0 +1,25 @@
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 38px;
+}
+
+.slider__button {
+  @include reset-indent();
+  padding: 13px 38px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+  font-size: 0;
+  border: 1px solid $basic-ultra-light;
+  background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.slider__button--next {
+  margin-left: -1px;
+}

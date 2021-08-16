@@ -1,0 +1,123 @@
+.product {
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.product__wrapper {
+  @include reset-indent();
+  display: block;
+  position: relative;
+  height: 195px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    height: 334px;
+    flex: 1 1 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 316px;
+    height: 462px;
+    flex: 1 1 auto;
+  }
+}
+
+.product__img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+  top: 0;
+  left: 0;
+}
+
+.product__inner {
+  padding: 0 28px;
+  border: 1px solid $basic-ultra-light;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    flex: 1 1 50%;
+    padding: 0 35px;
+    border: 1px solid $basic-ultra-light;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex: 1 1 33.3%;
+  }
+}
+
+.product__link {
+  @include reset-style-link();
+}
+
+.product__title {
+  @include reset-indent();
+  @include font-heading($font-size--basic, $line-height--basic);
+  padding-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    @include font-heading($font-size--large, $line-height--basic);
+  }
+}
+
+.product__info {
+  @include reset-list();
+  padding-bottom: 17px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid $basic-ultra-light;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.product__option,
+.product__value {
+  @include reset-list();
+  @include font-basic($font-size--petty, $line-height--large);
+  display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    @include font-basic($font-size--small, $line-height--large);
+  }
+}
+
+.product__box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 23px;
+  }
+}
+
+.product__price {
+  @include reset-list();
+  @include font-heading($font-size--small, $line-height--basic);
+
+  @media (min-width: $tablet-width) {
+    @include font-heading($font-size--basic, $line-height--basic);
+  }
+}
+
+.product__button {
+  @include reset-indent();
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+}
+

@@ -1,0 +1,27 @@
+.intro {
+  padding-top: 73px;
+  padding-bottom: 73px;
+  background-color: $basic-light;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 95px;
+  }
+}
+
+.intro__title {
+  @include reset-indent();
+  @include font-heading($size: $font-size--super-big);
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include font-heading($size: $font-size--huge, $line-height: $line-height--big);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font-heading($size: $font-size--gigant, $line-height: $line-height--huge);
+  }
+}

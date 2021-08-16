@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мишка|Вязание на заказ</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page-body">
+  <body class="page__body">
     <header class="page-header">
       <div class="page-container">
         <div class="page-header__main-part">
@@ -26,13 +27,13 @@
             </ul>
             <ul class="main-navigation__user-list">
               <li class="main-navigation__item search">
-                <form class="search__form">
+                <form class="search__form" id="search-form" method="get" action="https://echo.htmlacademy.ru">
                   <input class="search__field" type="text" name="user-query" id="user-search" placeholder="Поиск по сайту">
                   <button class="search__button" type="button">Найти</button>
                 </form>
               </li>
               <li class="main-navigation__item basket">
-                <a class="main-navigation__link basket__link">Корзина: <span>пока пуста</span></a>
+                <a class="main-navigation__link basket__link" href="#">Корзина: <span>пока пуста</span></a>
               </li>
             </ul>
           </nav>
@@ -54,20 +55,20 @@
     </header>
 
     <main class="page-main">
-      <section class="promo">
+      <section class="intro">
         <div class="page-container">
-          <h1 class="promo__title">Вязание на заказ</h1>
+          <h1 class="intro__title">Вязание на заказ</h1>
         </div>
       </section>
 
-      <section class="list-order">
+      <section class="order-form">
         <h2 class="visually-hidden">Бланк для заказа</h2>
-        <p class="list-order__info">Мы будем рады воплотить в жизнь ваши пожелания!
+        <p class="order-form__info">Мы будем рады воплотить в жизнь ваши пожелания!
           Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="list-order__form" id="order-form" method="post" action="https://echo.htmlacademy.ru">
+        <form id="order-list" method="post" action="https://echo.htmlacademy.ru">
 
-          <fieldset class="list-order__wrapper type-product">
-            <legend class="list-order__title">Тип</legend>
+          <fieldset class="order-form__wrapper type-product">
+            <legend class="order-form__title">Тип</legend>
             <p class="type-product__inner">
               <input class="type-product__item" type="radio" name="decor-thing" value="decor" id="decor-item" checked>
               <label class="type-product__title" for="decor-item">Аксессуар для интерьера</label>
@@ -78,8 +79,8 @@
             </p>
           </fieldset>
 
-          <fieldset class="list-order__wrapper color-product">
-            <legend class="list-order__title">Цвет</legend>
+          <fieldset class="order-form__wrapper color-product">
+            <legend class="order-form__title">Цвет</legend>
             <ul class="color-product__list">
               <li class="color-product__item">
                 <input class="color-product__checkbox" type="checkbox" name="white-color" value="white" id="white-paint" checked>
@@ -108,8 +109,8 @@
             </ul>
           </fieldset>
 
-          <fieldset class="list-order__wrapper user-info">
-            <legend class="list-order__title">Фио</legend>
+          <fieldset class="order-form__wrapper user-info">
+            <legend class="order-form__title">Фио</legend>
             <ul class="user-info__list">
               <li class="user-info__item">
                 <label class="user-info__title" for="user-name">Имя:</label>
@@ -126,39 +127,39 @@
             </ul>
           </fieldset>
 
-          <fieldset class="list-order__wrapper user-phone">
-            <legend class="list-order__title">Тел</legend>
+          <fieldset class="order-form__wrapper user-phone">
+            <legend class="order-form__title">Тел</legend>
             <p class="user-phone__inner">
               <input class="user-phone__date" type="number" name="user-phone" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
               <label class="visually-hidden" for="phone-number">Ваш телефон</label>
             </p>
           </fieldset>
 
-          <fieldset class="list-order__wrapper user-email">
-            <legend class="list-order__title">E-mail</legend>
+          <fieldset class="order-form__wrapper user-email">
+            <legend class="order-form__title">E-mail</legend>
             <p class="user-email__inner">
               <input class="user-email__date" type="email" name="user-email" id="email-address" placeholder="Ваш Email*" required>
               <label class="visually-hidden" for="email-address">Ваш E-mail адрес</label>
             </p>
           </fieldset>
 
-          <fieldset class="list-order__wrapper user-addition">
-            <legend class="list-order__title">Доп</legend>
+          <fieldset class="order-form__wrapper user-addition">
+            <legend class="order-form__title">Доп</legend>
             <p class="user-addition__inner">
               <textarea class="user-addition__text" name="user-addition" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </p>
           </fieldset>
 
-          <div class="list-order__footer">
-            <p class="list-order__footnote"><sup class="list-order__icon-asterisk">*</sup>Поля обязательны для заполнения</p>
-            <button class="list-order__button" type="submit">Отправить заказ</button>
+          <div class="order-form__footer">
+            <p class="order-form__footnote"><sup class="order-form__icon-asterisk">*</sup>Поля обязательны для заполнения</p>
+            <button class="order-form__button button" type="submit">Отправить заказ</button>
           </div>
         </form>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-container">
+      <div class="page-footer__wrapper">
 
         <section class="page-footer__logo footer-logo">
           <h2 class="visually-hidden">Логотип &laquo;Мишка&raquo;</h2>

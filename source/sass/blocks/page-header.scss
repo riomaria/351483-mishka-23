@@ -1,0 +1,9 @@
+.page-header {
+  @include reset-indent();
+  padding: 22px 0;
+
+  @media (min-width: $desktop-width) {
+    padding: 7px 0;
+  }
+}
+

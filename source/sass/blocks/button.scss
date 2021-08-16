@@ -1,0 +1,17 @@
+.button {
+  @include reset-indent();
+  @include font-heading($font-size--middle, $line-height--middle, $basic-dark);
+  display: inline-block;
+  width: 100%;
+  padding: 16px 11px;
+  background-color: $basic-white;
+  border: 2px solid $basic-dark;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size--basic;
+  }
+}

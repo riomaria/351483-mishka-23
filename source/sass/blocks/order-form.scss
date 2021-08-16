@@ -1,0 +1,32 @@
+.order-form {
+  padding-top: 17px;
+  padding-bottom: 55px;
+}
+
+.order-form__info {
+  @include reset-indent();
+  @include site-wrapper();
+  @include font-basic($size: $font-size--petty);
+  padding-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    @include font-basic($size: $font-size--basic, $line-height: $line-height--large);
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+    margin: 0 auto;
+    text-align: auto;
+  }
+}
+
+.order-form__wrapper {
+  @include reset-indent();
+  @include site-wrapper();
+  border: none;
+}
+
+.order-form__title {
+  @include font-accent();
+}

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page-body">
+  <body class="page__body">
     <header class="page-header">
       <div class="page-container">
         <div class="page-header__main-part">
           <a class="logo">
-          <svg class="logo__img" width="86" height="35"></svg>
+            <svg class="logo__img" width="86" height="35">
           </a>
-          <button class="menu-button menu-button--closed" type="button">
-            <span class="visually-hidden">Открыть/Закрыть меню</span>
-          </button>
           <nav class="main-navigation main-navigation--closed">
-            <ul class="main-navigation__list">
+            <button class="menu-button menu-button--closed" type="button" aria-expanded="false" aria-controls="main-navigation__list">
+              <svg class="menu-button__icon" aria-hidden="true" width="20" height="14">
+                <use class="menu-button__icon-menu" href="#"></use>
+                <use class="menu-button__icon-cross" href="#"></use>
+              </svg>
+            </button>
+            <ul class="main-navigation__list" id="main-navigation__list">
               <li class="main-navigation__item">
                 <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
               </li>
@@ -26,13 +30,13 @@
             </ul>
             <ul class="main-navigation__user-list">
               <li class="main-navigation__item search">
-                <form class="search__form">
+                <form class="search__form" id="search-form" method="get" action="https://echo.htmlacademy.ru">
                   <input class="search__field" type="text" name="user-query" id="user-search" placeholder="Поиск по сайту">
-                  <button class="search__button" type="button">Найти</button>
+                  <button class="search__button" type="button">Поиск по сайту</button>
                 </form>
               </li>
               <li class="main-navigation__item basket">
-                <a class="main-navigation__link basket__link">Корзина: <span>пока пуста</span></a>
+                <a class="main-navigation__link basket__link" href="#">Корзина: <span>пока пуста</span></a>
               </li>
             </ul>
           </nav>
@@ -55,18 +59,18 @@
 
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин вещей ручной работы для дома</h1>
-      <section class="promo main-promo">
-        <div class="page-container promo__wrapper">
+      <section class="promo">
+        <div class="promo__wrapper">
           <h2 class="promo__title">Милые штучки ручной работы для дома</h2>
-          <div class="main-promo__offers">
-            <a class="main-promo__article" href="#">Предметы интерьера</a>
-            <a class="main-promo__toys" href="#">Детские игрушки</a>
-          </div>
+        </div>
+        <div class="promo__offers">
+          <a class="promo__article" href="#">Предметы интерьера</a>
+          <a class="promo__toys" href="#">Детские игрушки</a>
         </div>
       </section>
 
       <section class="week-product">
-        <div class="page-container">
+        <!-- <div class="page-container"> -->
           <div class="week-product__title-inner">
             <h2 class="week-product__title">Товар недели</h2>
             <h3 class="week-product__subtitle">Вязаные корзинки</h3>
@@ -86,16 +90,16 @@
             height="315" alt="Три корзинки разных размеров">
           </div>
           <div class="week-product__order">
-            <p class="week-product__option week-product__price">Цена:
+            <p class="week-product__price">Цена:
               <span class="week-product__currency">990 руб.</span>
             </p>
             <button class="week-product__button button" type="button">Заказать</button>
           </div>
-        </div>
+        <!-- </div> -->
       </section>
 
       <section class="features">
-        <div class="page-container">
+        <!-- <div class="page-container"> -->
           <h2 class="features__title">Коротко о нас:</h2>
           <ul class="features__list">
             <li class="features__item features__item--floret">Экологически чистые материалы</li>
@@ -105,7 +109,7 @@
             <li class="features__item features__item--rocket">Поддержка отечественного производителя</li>
             <li class="features__item features__item--gift">Поставляется в подарочной упаковке</li>
           </ul>
-        </div>
+        <!-- </div> -->
       </section>
 
       <section class="reviews">
@@ -150,7 +154,7 @@
       </section>
 
       <section class="contacts">
-        <div class="contacts__inner">
+        <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
           <dl class="contacts__list">
             <dt class="contacts__item">e-mail:</dt>
@@ -165,13 +169,15 @@
             </dd>
           </dl>
         </div>
-        <img class="contacts__map" src="img/map.jpg" width="320" height="455" alt="Местоположение на карте интернет-магазина &laquo;Мишка&raquo;">
-        <a class="contacts__btn btn" href="#">Напишите нам</a>
+        <div class="contacts__map">
+          <iframe class="contacts__iframe" src="https://yandex.ru/map-widget/v1/-/CCUQi-hl0A" width="320" height="454" alt="Местоположение на карте интернет-магазина &laquo;Мишка&raquo;" allowfullscreen="true"></iframe>
+        </div>
+        <a class="contacts__button button" href="#">Напишите нам</a>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-container">
+      <div class="page-footer__wrapper">
 
         <section class="page-footer__logo footer-logo">
           <h2 class="visually-hidden">Логотип &laquo;Мишка&raquo;</h2>

@@ -1,0 +1,7 @@
+.production__item {
+  @include reset-indent();
+}
+
+.production__slogan {
+  @include font-heading($size: $font-size--moderate, $line-height: $line-height--small);
+}

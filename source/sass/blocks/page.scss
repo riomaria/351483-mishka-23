@@ -1,0 +1,22 @@
+.page {
+  @include reset-indent();
+  height: 100%;
+}
+
+.page__body {
+  @include reset-indent();
+  @include font-basic();
+  font-family: "Open Sans", "Arial", sans-serif;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-width: 320px;
+  min-height: 100%;
+  background-color: $basic-white;
+  box-sizing: border-box;
+}
+
+.page__container {
+  @include site-wrapper();
+  margin: 0 auto;
+  max-width: 1050px;
+}

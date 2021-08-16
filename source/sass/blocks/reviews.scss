@@ -1,0 +1,79 @@
+.reviews {
+  padding-top: 30px;
+  padding-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 82px;
+    padding-bottom: 85px;
+  }
+}
+
+.reviews__title {
+  @include reset-indent();
+  @include font-heading();
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    @include font-heading($size: $font-size--huge, $line-height: $line-height--big);
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font-heading($size: $font-size--gigant, $line-height: $line-height--huge);
+    padding-bottom: 35px;
+  }
+}
+
+.reviews__list {
+  @include reset-list();
+}
+
+.reviews__item + li {
+  display: none;
+}
+
+.reviews__subitem {
+  @include reset-indent();
+}
+
+.reviews__text {
+  @include reset-indent();
+  @include font-basic($line-height: $line-height--large);
+  padding-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    @include font-basic($size: $font-size--basic, $line-height: $line-height--large);
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 44px;
+  }
+}
+
+.reviews__author {
+  @include reset-indent();
+  @include font-heading($size: $font-size--basic, $line-height: $line-height--basic);
+
+  @media (min-width: $tablet-width) {
+    @include font-heading($size: $font-size--middle, $line-height: $line-height--basic);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font-heading($size: $font-size--basic, $line-height: $line-height--basic);
+  }
+}
+
+.reviews__link {
+  @include reset-indent();
+  @include font-basic($size: $font-size--basic, $line-height: $line-height--large);
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 96px;
+  }
+}
