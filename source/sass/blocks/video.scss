@@ -21,9 +21,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-height: 455px;
+    flex-direction: row;
+    position: relative;
     border: 1px solid $basic-ultra-light;
   }
 }
@@ -64,15 +63,15 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 12%;
+    right: 55px;
     width: 30%;
-    padding-top: 96px;
-    padding-bottom: 27px;
-    padding-left: 80px;
     border: none;
 
     &::before {
-      top: 40%;
-      left: 80px;
+      top: 8%;
+      left: 27%;
     }
   }
 }
@@ -92,6 +91,7 @@
 
   @media (min-width: $desktop-width) {
     width: 683px;
+    height: auto;
   }
 }
 
@@ -135,6 +135,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 30%;
+    padding-top: 172px;
     padding-bottom: 60px;
     padding-left: 80px;
     padding-right: 40px;

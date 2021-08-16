@@ -1,0 +1,5 @@
+.container {
+  @include site-wrapper();
+  margin: 0 auto;
+  max-width: 1050px;
+}
