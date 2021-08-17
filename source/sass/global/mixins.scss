@@ -63,3 +63,7 @@
     padding: 0 50px;
   }
 }
+
+@mixin grid-padding-desktop() {
+  padding-left: 175px;
+}

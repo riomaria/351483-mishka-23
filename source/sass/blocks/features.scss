@@ -1,16 +1,14 @@
 .features {
-  @include site-wrapper();
   padding-top: 30px;
   padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     padding-top: 55px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 68px;
-    padding-left: 175px;
-    padding-right: 175px;
+    padding-top: 70px;
   }
 }
 
@@ -20,12 +18,13 @@
   padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    @include font-heading($size: $font-size--huge, $line-height: $line-height--big);
+    @include font-heading($font-size--huge, $line-height--big);
     padding-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    @include font-heading($size: $font-size--gigant, $line-height: $line-height--huge);
+    @include font-heading($font-size--gigant, $line-height--huge);
+    @include grid-padding-desktop();
   }
 }
 
@@ -34,20 +33,33 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include grid-padding-desktop();
   }
 }
 
 .features__item {
-  @include font-heading($size: $font-size--basic, $line-height: $line-height--middle);
+  @include font-heading($font-size--basic, $line-height--middle);
   position: relative;
-  padding-top: 55px;
+  max-width: 260px;
+  padding-top: 60px;
   padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    @include font-heading($size: $font-size--large, $line-height: $line-height--modarate);
+    @include font-heading($font-size--large, $line-height--modarate);
+    min-width: 320px;
+    max-width: 39%;
+    padding-bottom: 60px;
+    padding-right: 27px;
+    box-sizing: border-box;
   }
+
+  // @media (min-width: $desktop-width) {
+  // }
 }
 
 .features__item::before {
@@ -57,5 +69,80 @@
   width: 34px;
   height: 27px;
   content: "";
-  background-color: $basic-accent;
+}
+
+.features__item--flower {
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.features__item--flower::before {
+  width: 33px;
+  height: 38px;
+  background-image: url("../../img/features/flower.svg");
+  background-repeat: no-repeat;
+}
+
+.features__item--banknote {
+  @media (min-width: $tablet-width) {
+    order: 3;
+  }
+}
+
+.features__item--banknote::before {
+  width: 47px;
+  height: 27px;
+  background-image: url("../../img/features/banknote.svg");
+  background-repeat: no-repeat;
+}
+
+.features__item--heart {
+  @media (min-width: $tablet-width) {
+    order: 5;
+  }
+}
+
+.features__item--heart::before {
+  background-image: url("../../img/features/heart.svg");
+  background-repeat: no-repeat;
+}
+
+.features__item--skein {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}
+
+.features__item--skein::before {
+  width: 35px;
+  height: 34px;
+  background-image: url("../../img/features/skein.svg");
+  background-repeat: no-repeat;
+}
+
+.features__item--rocket {
+  @media (min-width: $tablet-width) {
+    order: 4;
+  }
+}
+
+.features__item--rocket::before {
+  width: 55px;
+  height: 23px;
+  background-image: url("../../img/features/rocket.svg");
+  background-repeat: no-repeat;
+}
+
+.features__item--gift {
+  @media (min-width: $tablet-width) {
+    order: 6;
+  }
+}
+
+.features__item--gift::before {
+  width: 33px;
+  height: 32px;
+  background-image: url("../../img/features/gift.svg");
+  background-repeat: no-repeat;
 }
