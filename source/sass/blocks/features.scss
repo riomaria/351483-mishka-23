@@ -12,6 +12,11 @@
   }
 }
 
+.features__wrapper {
+  @include site-wrapper();
+  @include site-container();
+}
+
 .features__title {
   @include reset-indent();
   @include font-heading();

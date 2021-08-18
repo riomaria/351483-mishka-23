@@ -1,7 +1,29 @@
 .production__item {
   @include reset-indent();
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .production__slogan {
   @include font-heading($size: $font-size--moderate, $line-height: $line-height--small);
+  padding-right: 45px;
+}
+
+.production__logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.production__logo path {
+  fill: $basic-accent;
+
+  &:hover {
+    fill: $accent-dark;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

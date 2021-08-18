@@ -64,6 +64,11 @@
   }
 }
 
+@mixin site-container() {
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
 @mixin grid-padding-desktop() {
   padding-left: 175px;
 }

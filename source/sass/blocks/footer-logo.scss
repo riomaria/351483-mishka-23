@@ -1,7 +1,11 @@
-.footer-logo {
-  display: none;
+.footer-logo__img path {
+  fill: $basic-black;
 
-  @media (min-width: $tablet-width) {
-    display: block;
+  &:hover {
+    fill: $accent-dark;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
