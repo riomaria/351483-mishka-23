@@ -132,6 +132,12 @@
   display: block;
   /*после svg убрать*/ }
 
+.search {
+  display: none; }
+
+.basket {
+  display: none; }
+
 .add-part {
   display: none; }
 
@@ -918,6 +924,24 @@
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase; }
+
+.type-product {
+  display: none; }
+
+.color-product {
+  display: none; }
+
+.user-info {
+  display: none; }
+
+.user-phone {
+  display: none; }
+
+.user-email {
+  display: none; }
+
+.user-addition {
+  display: none; }
 
 .catalog__list {
   list-style: none;
