@@ -14,14 +14,14 @@
 
 .intro__title {
   @include reset-indent();
-  @include font-heading($size: $font-size--super-big);
+  @include font-heading($font-size--super-big);
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    @include font-heading($size: $font-size--huge, $line-height: $line-height--big);
+    @include font-heading($font-size--huge, $line-height--big);
   }
 
   @media (min-width: $desktop-width) {
-    @include font-heading($size: $font-size--gigant, $line-height: $line-height--huge);
+    @include font-heading($font-size--gigant, $line-height--huge);
   }
 }

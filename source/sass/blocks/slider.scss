@@ -6,14 +6,15 @@
 
 .slider__button {
   @include reset-indent();
-  padding: 13px 38px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex: 1;
+  display: inline-block;
+  width: 50%;
+  height: 52px;
   font-size: 0;
   border: 1px solid $basic-ultra-light;
   background-color: $basic-white;
+  background-image: url("../../img/btn-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-width: $tablet-width) {
     border: none;
@@ -22,4 +23,6 @@
 
 .slider__button--next {
   margin-left: -1px;
+  transform: rotate(180deg);
+  background-position: center;
 }

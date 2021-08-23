@@ -5,6 +5,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 55px;
     padding-bottom: 55px;
+    border-image: url("../../img/zigzag-line.svg");
   }
 
   @media (min-width: $desktop-width) {
@@ -57,7 +58,7 @@
   @media (min-width: $tablet-width) {
     @include font-heading($font-size--large, $line-height--modarate);
     min-width: 320px;
-    max-width: 39%;
+    width: 50%;
     padding-bottom: 60px;
     padding-right: 27px;
     box-sizing: border-box;

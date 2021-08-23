@@ -5,8 +5,24 @@
   @media (min-width: $tablet-width) {
     padding-top: 82px;
     padding-bottom: 85px;
+    background-image: url("../../img/back-review.jpg");
+    background-size: 50%;
+    background-repeat: no-repeat;
   }
 }
+
+.reviews__container {
+  @media (min-width: $desktop-width) {
+    @include site-wrapper();
+    @include site-container();
+  }
+}
+
+// .reviews__wrapper {
+//   @media (min-width: $tablet-width) {
+
+//   }
+// }
 
 .reviews__title {
   @include reset-indent();
@@ -14,22 +30,24 @@
   padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    @include font-heading($size: $font-size--huge, $line-height: $line-height--big);
+    @include font-heading($font-size--huge, $line-height--big);
+    // grid-template: 1/2;
+    // grid-row: 1/2;
     padding-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    @include font-heading($size: $font-size--gigant, $line-height: $line-height--huge);
+    @include font-heading($font-size--gigant, $line-height--huge);
     padding-bottom: 35px;
   }
 }
 
 .reviews__list {
   @include reset-list();
-}
 
-.reviews__item + li {
-  display: none;
+  // @media (min-width: $tablet-width) {
+
+  // }
 }
 
 .reviews__subitem {
@@ -38,11 +56,13 @@
 
 .reviews__text {
   @include reset-indent();
-  @include font-basic($line-height: $line-height--large);
+  @include font-basic();
   padding-bottom: 33px;
 
   @media (min-width: $tablet-width) {
-    @include font-basic($size: $font-size--basic, $line-height: $line-height--large);
+    @include font-basic($font-size--basic, $line-height--large);
+    // grid-template: 1/3;
+    // grid-row: 2;
     padding-bottom: 60px;
   }
 
@@ -53,20 +73,20 @@
 
 .reviews__author {
   @include reset-indent();
-  @include font-heading($size: $font-size--basic, $line-height: $line-height--basic);
+  @include font-heading($font-size--basic, $line-height--basic);
 
   @media (min-width: $tablet-width) {
-    @include font-heading($size: $font-size--middle, $line-height: $line-height--basic);
+    @include font-heading($font-size--middle, $line-height--basic);
   }
 
   @media (min-width: $desktop-width) {
-    @include font-heading($size: $font-size--basic, $line-height: $line-height--basic);
+    @include font-heading($font-size--basic, $line-height--basic);
   }
 }
 
 .reviews__link {
   @include reset-indent();
-  @include font-basic($size: $font-size--basic, $line-height: $line-height--large);
+  @include font-basic($font-size--basic, $line-height--large);
   padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
@@ -75,5 +95,21 @@
 
   @media (min-width: $desktop-width) {
     padding-bottom: 96px;
+  }
+}
+
+.reviews__slider {
+  @media (min-width: $tablet-width) {
+    width: 175px;
+  }
+}
+
+.reviews__button {
+  min-width: 100%;
+
+  @media (min-width: $tablet-width) {
+    // grid-template: 2/3;
+    // grid-row: 1;
+    min-width: 175px;
   }
 }

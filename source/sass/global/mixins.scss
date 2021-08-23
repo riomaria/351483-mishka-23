@@ -56,6 +56,14 @@
   text-transform: uppercase;
 }
 
+@mixin font-form ($size: $font-size--moderate, $line-height: $line-height--small, $color: $basic-black, $weight: $weight-bold, $style: $style-normal) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+
 @mixin site-wrapper() {
   padding: 0 30px;
 
@@ -67,6 +75,10 @@
 @mixin site-container() {
   margin: 0 auto;
   max-width: 1150px;
+}
+
+@mixin grid-padding-basic {
+  padding-left: 170px;
 }
 
 @mixin grid-padding-desktop() {

@@ -10,10 +10,6 @@
 
 .contacts__container {
   @media (min-width: $desktop-width) {
-    height: 457px;
-  }
-
-  @media (min-width: $desktop-width) {
     @include site-wrapper();
     display: flex;
     justify-content: flex-start;
