@@ -1,68 +1,62 @@
 .promo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 300px;
   background-image: url("../img/promo.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 0 -20px;
   background-size: 100%;
   padding-top: 73px;
 
+
   @media (min-width: tablet-width) {
-    min-height: 625px;
-    padding-top: 154px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 157px;
+    padding-top: 155px;
   }
 }
 
-.promo__wrapper {
-  @include site-wrapper;
-  flex: 1 1 auto;
-}
+// .promo__wrapper {
+//   @include site-wrapper;
+//   flex: 1 1 auto;
+// }
 
 .promo__title {
   @include reset-indent();
-  @include font-heading($size: $font-size--super-big);
+  @include font-heading($font-size--super-big);
+  @include site-container();
+  @include site-wrapper();
+  max-width: 400px;
+  // padding-top: 73px;
   padding-bottom: 120px;
   text-align: center;
-  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    @include font-heading($size: $font-size--huge, $line-height: $line-height--big);
-    width: 500px;
+    @include font-heading($font-size--huge, $line-height--big);
+    max-width: 650px;
     padding-bottom: 372px;
   }
 
   @media (min-width: $desktop-width) {
-    @include font-heading($size: $font-size--gigant, $line-height: $line-height--huge);
-    width: 610px;
+    @include font-heading($font-size--gigant, $line-height--huge);
+    max-width: 750px;
     padding-bottom: 355px;
   }
 }
 
 .promo__offers {
-  align-self: stretch;
-
   @media (min-width: $tablet-width) {
+    @include site-container();
+    @include site-wrapper();
     display: flex;
     justify-content: space-between;
-    padding: 0 50px;
   }
 }
 
 .promo__article,
 .promo__toys {
   @include reset-decoration();
-  @include font-heading($size: $font-size--moderate, $line-height: $line-height--basic, $color: $basic-white);
+  @include font-heading($font-size--moderate, $line-height--basic, $basic-white);
   display: block;
   padding: 24px 30px 31px 30px;
 
   @media (min-width: $tablet-width) {
-    @include font-heading($size: $font-size--large, $line-height: $line-height--large, $color: $basic-white);
+    @include font-heading($font-size--large, $line-height--large, $basic-white);
     width: 50%;
     padding: 25px 36px 34px 36px;
   }

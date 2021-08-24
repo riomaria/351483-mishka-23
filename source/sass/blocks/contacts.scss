@@ -11,6 +11,7 @@
 .contacts__container {
   @media (min-width: $desktop-width) {
     @include site-wrapper();
+    @include site-container();
     display: flex;
     justify-content: flex-start;
     position: relative;
