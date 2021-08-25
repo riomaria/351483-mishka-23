@@ -2,7 +2,7 @@
   @include reset-indent();
   @include font-heading($font-size--middle, $line-height--middle, $basic-dark);
   display: inline-block;
-  min-width: 260px;
+  min-width: 175px;
   padding: 16px 11px;
   background-color: $basic-white;
   border: 2px solid $basic-dark;
@@ -14,4 +14,14 @@
   @media (min-width: $tablet-width) {
     font-size: $font-size--basic;
   }
+}
+
+.button:hover,
+.button:focus {
+  background-color: $basic-dark;
+  color: $basic-white;
+}
+
+.button:active {
+  color: $basic-white-30a;
 }

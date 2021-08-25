@@ -65,10 +65,22 @@
 }
 
 @mixin site-wrapper() {
-  padding: 0 30px;
+  padding-right: 30px;
+  padding-left: 30px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+@mixin site-padding() {
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 50px;
+    padding-left: 50px;
   }
 }
 

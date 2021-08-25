@@ -21,6 +21,15 @@
   }
 }
 
+.slider__button:hover,
+.slider__button:focus {
+  opacity: 0.6;
+}
+
+.slider__button:active {
+  opacity: 0.3;
+}
+
 .slider__button--next {
   margin-left: -1px;
   transform: rotate(180deg);
