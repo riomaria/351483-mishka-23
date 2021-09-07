@@ -4,13 +4,13 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding-top: 95px;
+    padding-top: 65px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 150px;
+    padding-top: 110px;
   }
 }
 

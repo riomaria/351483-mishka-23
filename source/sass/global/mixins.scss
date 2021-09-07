@@ -64,11 +64,31 @@
   font-style: $style;
 }
 
+@mixin font-placeholder ($size: $font-size--moderate, $line-height: $line-height--small, $color: $basic-black-30a, $weight: $weight-normal, $style: $style-normal) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+
 @mixin site-wrapper() {
-  padding: 0 30px;
+  padding-right: 30px;
+  padding-left: 30px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+@mixin site-padding() {
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 50px;
+    padding-left: 50px;
   }
 }
 
@@ -82,5 +102,5 @@
 }
 
 @mixin grid-padding-desktop() {
-  padding-left: 175px;
+  padding-left: $inner-padding--big;
 }

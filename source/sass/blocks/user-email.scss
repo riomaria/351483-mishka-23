@@ -6,41 +6,38 @@
 
 .user-email__wrapper {
   @include site-container();
-  @include site-wrapper();
+  @include site-padding();
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 170px 1fr;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    grid-template-columns: $padding-left--tablet 1fr;
+    padding-bottom: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: $padding-left--desktop 1fr;
+    padding-bottom: 27px;
   }
 }
 
 .user-email__item {
   @include reset-indent();
-  margin-bottom: 21px;
+  margin-top: -6px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     grid-column: 2/-1;
     display: flex;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 170px;
+    padding-right: $padding-right--desktop;
   }
 }
 
 .user-email__text {
-  @include reset-indent();
-  border: none;
-  border-bottom: 2px solid $basic-black;
-  width: 100%;
-  padding-top: 17px;
-  padding-bottom: 18px;
-
   @media (min-width: $tablet-width) {
-    padding-bottom: 10px;
-    padding-top: 15px;
     background-color: $basic-light;
   }
 }

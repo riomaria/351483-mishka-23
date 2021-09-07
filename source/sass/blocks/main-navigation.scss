@@ -1,18 +1,53 @@
 .main-navigation {
-  display: block;
-  background-color: #998877;
-  // bottom: -79px;
+  @include site-padding();
+  background-color: $basic-white;
 }
 
 .main-navigation__list {
   @include reset-list();
+  position: absolute;
+  top: 79px;
+  left: 0;
+  z-index: 10;
+}
+
+// .main-navigation__item {
+//   padding-top: 28px;
+//   padding-bottom: 26px;
+// }
+
+.main-navigation__list--closed {
+  display: block;
+}
+
+.main-navigation__button {
+  position: absolute;
+  top: 9px;
+  right: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation__icon {
+  fill: #000999;
+  width: 20px;
+  height: 14px;
 }
 
 .main-navigation__link {
   @include reset-style-link();
-  @include font-heading($size: $font-size--basic, $line-height: $line-height--basic);
+  @include font-heading($font-size--basic, $line-height--basic);
 }
 
 .main-navigation__user-list {
   @include reset-list();
+  display: none;
+  position: absolute;
+  top: 140px;
+  left: 0;
 }

@@ -12,13 +12,22 @@
   font-size: 0;
   border: 1px solid $basic-ultra-light;
   background-color: $basic-white;
-  background-image: url("../../img/btn-arrow.svg");
+  background-image: url("../img/icons/icon-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 
   @media (min-width: $tablet-width) {
     border: none;
   }
+}
+
+.slider__button:hover,
+.slider__button:focus {
+  opacity: 0.6;
+}
+
+.slider__button:active {
+  opacity: 0.3;
 }
 
 .slider__button--next {

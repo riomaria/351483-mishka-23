@@ -1,71 +1,208 @@
 .promo {
-  background-image: url("../img/promo.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 -20px;
-  background-size: 100%;
-  padding-top: 73px;
+  min-height: 490px;
+  background-color: $basic-super-light;
 
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
 
-  @media (min-width: tablet-width) {
-    padding-top: 155px;
+  &::after {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 24px;
+      bottom: -14px;
+      left: 0;
+      background-image: url("../img/zigzag-fill-24.svg");
+      background-repeat-x: repeat;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("../img/zigzag-fill-34.svg");
+      height: 34px;
+    }
   }
 }
 
-// .promo__wrapper {
-//   @include site-wrapper;
-//   flex: 1 1 auto;
+// .promo::after {
+//   @media (min-width: $tablet-width) {
+//     position: absolute;
+//     content: "";
+//     width: 100%;
+//     height: 24px;
+//     bottom: -14px;
+//     left: 0;
+//     background-image: url("../img/zigzag-fill-desktop.svg");
+//     background-repeat-x: repeat;
+//   }
 // }
+
+.promo__container {
+  @include site-container();
+  display: flex;
+  flex-direction: column;
+  min-height: 490px;
+  padding-top: 73px;
+  background-image: url("../img/promo/promo-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% -20px;
+  background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/promo/promo-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    @include site-padding();
+    min-height: 745px;
+    padding-top: 155px;
+    background-image: url("../img/promo/promo-tablet.jpg");
+    background-position: 50% 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/promo-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 157px;
+    background-image: url("../img/promo/promo-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo/promo-desktop@2x.jpg");
+    }
+  }
+}
 
 .promo__title {
   @include reset-indent();
-  @include font-heading($font-size--super-big);
   @include site-container();
-  @include site-wrapper();
+  @include font-heading($font-size--super-big);
   max-width: 400px;
-  // padding-top: 73px;
-  padding-bottom: 120px;
+  padding: 0 30px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     @include font-heading($font-size--huge, $line-height--big);
     max-width: 650px;
-    padding-bottom: 372px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     @include font-heading($font-size--gigant, $line-height--huge);
     max-width: 750px;
-    padding-bottom: 355px;
   }
 }
 
-.promo__offers {
+.promo__items {
+  margin-top: auto;
+
   @media (min-width: $tablet-width) {
-    @include site-container();
-    @include site-wrapper();
     display: flex;
     justify-content: space-between;
   }
 }
 
-.promo__article,
+.promo__interior,
 .promo__toys {
   @include reset-decoration();
   @include font-heading($font-size--moderate, $line-height--basic, $basic-white);
   display: block;
-  padding: 24px 30px 31px 30px;
+  position: relative;
+  min-height: 100px;
+  padding: 23px 30px 18px 30px;
 
   @media (min-width: $tablet-width) {
     @include font-heading($font-size--large, $line-height--large, $basic-white);
     width: 50%;
-    padding: 25px 36px 34px 36px;
+    padding: 30px 36px 30px 36px;
   }
 }
 
-.promo__article {
+.promo__interior {
   background-color: $basic-accent;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-light;
+  }
+
+  &:active {
+    background-color: $accent-light;
+  }
 }
 
 .promo__toys {
   background-color: $accent-medium;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-dark;
+  }
+
+  &:active {
+    background-color: $accent-dark;
+  }
+}
+
+// .promo__interior:hover,
+// .promo__interior:focus {
+//   background-color: $accent-light;
+// }
+
+// .promo__toys:hover,
+// .promo__toys:focus {
+//   background-color: $accent-dark;
+// }
+
+// .promo__interior:active {
+//   background-color: $accent-light;
+// }
+
+// .promo__toys:active {
+//   background-color: $accent-dark;
+// }
+
+.promo__interior::after,
+.promo__toys::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  opacity: 50%;
+  top: 15px;
+  right: 25px;
+
+  @media (min-width: $tablet-width) {
+    top: 22px;
+  }
+}
+
+.promo__interior::after {
+  width: 51px;
+  height: 62px;
+  background-image: url("../img/icons/icon-interior.svg");
+}
+
+.promo__toys::after {
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/icons/icon-toy.svg");
+}
+
+.promo__interior:hover::after,
+.promo__interior:focus::after,
+.promo__toys:hover::after,
+.promo__toys:focus::after {
+  opacity: 70%;
+}
+
+.promo__interior:active::after,
+.promo__toys:active::after {
+  opacity: 30%;
+}
+
+.promo__inner {
+  display: block;
+  max-width: 150px;
 }
