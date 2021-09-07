@@ -2059,7 +2059,7 @@ img {
   margin: 0;
   padding: 0;
   max-width: 204px;
-  padding-bottom: 17px; }
+  padding-bottom: 10px; }
   @media (min-width: 768px) {
     .product__info {
       max-width: 255px; } }
@@ -2088,7 +2088,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin-top: auto;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
   border-top: 1px solid #ececec; }
 
