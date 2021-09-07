@@ -14,6 +14,15 @@
 .video__container {
   border: 1px solid $basic-ultra-light;
 
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px $basic-ultra-light;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $basic-ultra-light;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
@@ -45,7 +54,7 @@
     height: 22px;
     top: 28%;
     left: 30px;
-    background-image: url("../../img/icon-video.svg");
+    background-image: url("../img/icons/icon-video.svg");
     background-repeat: no-repeat;
   }
 
@@ -65,14 +74,15 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 12%;
-    right: 70px;
-    width: 30%;
+    top: 100px;
+    right: 105px;
+    width: 180px;
     border: none;
+    padding: 0;
 
     &::before {
-      top: 8%;
-      left: 27.5%;
+      top: -35px;
+      left: 0;
     }
   }
 }
@@ -80,7 +90,7 @@
 .video__wrapper {
   position: relative;
   min-height: 150px;
-  margin-bottom: 35px;
+  // margin-bottom: 35px;
   padding: 0 0 58% 0;
   overflow: hidden;
 
@@ -111,20 +121,35 @@
 
 .video__button {
   position: absolute;
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 0;
   width: 100px;
-  height: 50px;
+  height: 76px;
+  border: none;
+  border-radius: 19px 19px;
+  background-color: $basic-white;
+  background-image: url("../img/video-play.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.video__button:hover,
+.video__button:focus {
+  transform: scale(1.2) translate(-50%, -50%);
+}
+
+.video__button:active {
+  transform: scale(0.8) translate(-50%, -50%);
+  opacity: 0.3;
 }
 
 .video__inner {
-  padding-top: 0;
+  padding-top: 35px;
   padding-bottom: 33px;
   padding-left: 34px;
   padding-right: 34px;
-  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
@@ -160,5 +185,10 @@
 }
 
 .video__order-button {
+  @include font-heading($font-size--middle);
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    @include font-heading();
+  }
 }

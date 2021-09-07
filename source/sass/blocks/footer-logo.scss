@@ -1,11 +1,27 @@
-.footer-logo__img path {
+.footer-logo {
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 48px;
+    padding-bottom: 50px;
+  }
+}
+
+.footer--logo__link {
+  display: block;
+}
+
+.footer-logo__img {
+  width: 102px;
+  height: 34px;
   fill: $basic-black;
 
-  &:hover {
+  &:hover,
+  &:focus {
     fill: $accent-dark;
   }
 
   &:active {
-    opacity: 0.3;
+    fill: $accent-dark-30a;
   }
 }

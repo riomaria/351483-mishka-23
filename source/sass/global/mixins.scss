@@ -64,6 +64,14 @@
   font-style: $style;
 }
 
+@mixin font-placeholder ($size: $font-size--moderate, $line-height: $line-height--small, $color: $basic-black-30a, $weight: $weight-normal, $style: $style-normal) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+
 @mixin site-wrapper() {
   padding-right: 30px;
   padding-left: 30px;
@@ -94,5 +102,5 @@
 }
 
 @mixin grid-padding-desktop() {
-  padding-left: 175px;
+  padding-left: $inner-padding--big;
 }

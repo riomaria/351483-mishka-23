@@ -1,29 +1,47 @@
 .production__item {
   @include reset-indent();
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
+
+.production__text {
+  @include font-heading($font-size--moderate, $line-height--small);
+  display: block;
+  padding-right: 25px;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+  }
+}
+
+.production__link {
   display: inline-block;
   vertical-align: middle;
 }
 
-.production__slogan {
-  @include font-heading($size: $font-size--moderate, $line-height: $line-height--small);
-  padding-right: 45px;
-}
-
 .production__logo {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.production__logo path {
   fill: $basic-accent;
+  justify-self: flex-end;
 
-  &:hover {
+  &:hover,
+  &:focus {
     fill: $accent-dark;
   }
 
   &:active {
-    opacity: 0.3;
+    fill: $accent-dark-30a;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 6px;
   }
 }

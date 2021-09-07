@@ -1,28 +1,31 @@
-// .user-addition {
-
-// }
-
 .user-addition__wrapper {
   @include site-container();
-  @include site-wrapper();
+  @include site-padding();
+  padding-bottom: 11px;
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 170px 1fr;
+    grid-template-columns: $padding-left--tablet 1fr;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 47px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 174px 1fr;
+    grid-template-columns: $padding-left--desktop 1fr;
+    padding-bottom: 42px;
   }
 }
 
 .user-addition__item {
   @include reset-indent();
+  margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 
   @media (min-width: $desktop-width) {
-    padding-right: 170px;
+    padding-right: $padding-right--desktop;
   }
 }
 
@@ -31,10 +34,6 @@
   border: 2px solid $basic-black;
   min-height: 142px;
   min-width: 100%;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  padding-right: 17px;
-  padding-left: 17px;
   resize: none;
 
   @media (min-width: $tablet-width) {

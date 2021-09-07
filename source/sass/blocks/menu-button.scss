@@ -1,8 +1,5 @@
 .menu-button {
-  width: 20px;
-  height: 14px;
-  background-color: #098900;
-  border: none;
+  display: none;
 
   @media (min-width: $tablet-width) {
     display: none;

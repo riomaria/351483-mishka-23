@@ -41,22 +41,22 @@
   }
 }
 
-.reviews__wrapper::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background-image: url("../img/zigzag-mobile.svg");
-  background-repeat: repeat;
+// .reviews__wrapper::after {
+//   position: absolute;
+//   content: "";
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 6px;
+//   background-image: url("../img/zigzag-mobile.svg");
+//   background-repeat: repeat;
 
-  @media (min-width: $tablet-width) {
-    height: 17px;
-    background-image: url("../img/zigzag-desktop.svg");
-    background-position: 18px 0;
-  }
-}
+//   @media (min-width: $tablet-width) {
+//     height: 17px;
+//     background-image: url("../img/zigzag-desktop.svg");
+//     background-position: 18px 0;
+//   }
+// }
 
 .reviews__title {
   @include reset-indent();

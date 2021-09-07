@@ -1,12 +1,8 @@
 .page-footer {
-  padding-top: 25px;
-  padding-bottom: 20px;
   background-color: $basic-light;
 }
 
 .page-footer__wrapper {
-  padding-top: 25px;
-  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +14,21 @@
   }
 }
 
-.page-footer__logo {
+.page-footer__item {
+  width: 100%;
+  border-bottom: 1px solid $basic-medium-light;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 30%;
+    border-bottom: none;
+  }
+}
+
+.page-footer__item--logo {
   display: none;
 
   @media (min-width: $tablet-width) {

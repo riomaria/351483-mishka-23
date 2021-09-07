@@ -5,7 +5,6 @@
   @media (min-width: $tablet-width) {
     padding-top: 55px;
     padding-bottom: 55px;
-    border-image: url("../../img/zigzag-line.svg");
   }
 
   @media (min-width: $desktop-width) {
@@ -14,7 +13,7 @@
 }
 
 .features__wrapper {
-  @include site-wrapper();
+  @include site-padding();
   @include site-container();
 }
 
@@ -50,16 +49,17 @@
 .features__item {
   @include font-heading($font-size--basic, $line-height--middle);
   position: relative;
-  max-width: 260px;
   padding-top: 60px;
   padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     @include font-heading($font-size--large, $line-height--modarate);
-    min-width: 320px;
     width: 50%;
     padding-bottom: 60px;
-    padding-right: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
   }
 }
 
@@ -75,6 +75,7 @@
 .features__item--flower {
   @media (min-width: $tablet-width) {
     order: 1;
+    // width: 195px;
   }
 }
 
@@ -146,4 +147,31 @@
   height: 32px;
   background-image: url("../img/features/gift.svg");
   background-repeat: no-repeat;
+}
+
+.features__text {
+  width: 200px;
+  padding-right: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+  }
+}
+
+.features__text__flower {
+  width: 195px;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+  }
+}
+
+.features__text--skein,
+.features__text--rocket,
+.features__text--gift {
+  width: 260px;
+
+  @media (min-width: $tablet-width) {
+    width: 320px;
+  }
 }
