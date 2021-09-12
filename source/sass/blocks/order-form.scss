@@ -76,7 +76,7 @@
 }
 
 .order-form input[type="text"],
-.order-form input[type="number"],
+.order-form input[type="phone"],
 .order-form input[type="email"],
 .order-form textarea {
   @include reset-indent();
@@ -110,28 +110,11 @@
 
 .order-form input[type="text"]:hover,
 .order-form input[type="text"]:focus,
-.order-form input[type="number"]:hover,
-.order-form input[type="number"]:focus,
+.order-form input[type="phone"]:hover,
+.order-form input[type="phone"]:focus,
 .order-form input[type="email"]:hover,
 .order-form input[type="email"]:focus {
   border-bottom-color: $accent-ultra-light;
-}
-
-.order-form textarea:hover,
-.order-form textarea:focus {
-  border-color: $accent-ultra-light;
-}
-
-
-.order-form input[type="text"]::placeholder,
-.order-form input[type="number"]::placeholder,
-.order-form input[type="email"]::placeholder,
-.order-form textarea::placeholder {
-  @include font-placeholder ($font-size--basic);
-
-  @media (min-width: $tablet-width) {
-    @include font-placeholder();
-  }
 }
 
 .order-form__footer {

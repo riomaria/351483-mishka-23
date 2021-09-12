@@ -1,6 +1,7 @@
 .page {
   @include reset-indent();
   height: 100%;
+  position: relative;
 }
 
 .page__body {

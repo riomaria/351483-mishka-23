@@ -1,6 +1,6 @@
 .button {
   @include reset-indent();
-  @include font-heading($font-size--basic, $line-height--petty, $basic-dark);
+  @include font-heading($font-size--middle, $line-height--petty, $basic-dark);
   display: inline-block;
   min-width: 175px;
   padding-top: 16px;
@@ -13,14 +13,19 @@
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-dark;
+    color: $basic-white;
+  }
+
+  &:active {
+    color: $basic-white-30a;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include font-heading($font-size--basic, $line-height--petty, $basic-dark);
+  }
 }
 
-.button:hover,
-.button:focus {
-  background-color: $basic-dark;
-  color: $basic-white;
-}
-
-.button:active {
-  color: $basic-white-30a;
-}

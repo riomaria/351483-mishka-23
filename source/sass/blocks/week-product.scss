@@ -1,19 +1,52 @@
 .week-product {
+  position: relative;
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 43px;
 
   @media (min-width: $tablet-width) {
-    // display: flex;
-    // flex-direction: column;
+    padding-top: 52px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
     padding-top: 70px;
-    padding-bottom: 60px;
+    padding-bottom: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/zigzag-line.svg");
+
+    @media (min-width: $tablet-width) {
+      height: 17px;
+      background-image: url("../img/zigzag-line-tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
   }
 }
 
 .week-product__container {
   @media (min-width: $desktop-width) {
-    // @include grid-padding-desktop();
     position: relative;
+    padding-bottom: 95px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1050px;
+      height: 23px;
+      bottom: 0;
+      left: 50px;
+      background-image: url("../img/zigzag-line-desktop.svg");
+    }
   }
 }
 
@@ -32,26 +65,28 @@
     position: absolute;
     flex-direction: row-reverse;
     z-index: 10;
-    top: 25px;
-    left: 80px;
+    top: 61px;
+    left: 95px;
   }
 }
 
 .week-product__title {
   @include reset-indent();
   @include font-heading($font-size--basic, $line-height--middle, $basic-accent);
+  padding-top: 5px;
   padding-bottom: 17px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     width: 100px;
-    padding-bottom: 0;
+    padding-bottom: 10px;
+    padding-right: 25px;
     text-align: center;
     line-height: $line-height--little;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 43px;
+    margin-right: 30px;
   }
 }
 
@@ -78,6 +113,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-rows: 50% min-content min-content;
     column-gap: 58px;
   }
 }
@@ -85,49 +121,79 @@
 .week-product__info {
   @include reset-indent();
   min-width: 260px;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     @include font-basic($font-size--basic, $line-height--large);
     max-width: 291px;
-    padding-bottom: 48px;
+    margin-top: -13px;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     @include grid-padding-desktop();
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: 155px;
+    // padding-bottom: 20px;
     max-width: 100%;
+    margin-top: 0;
   }
 }
 
 .week-product__description {
   @include reset-list();
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 260px;
+  @include font-basic($font-size--small, $line-height--middle);
+  display: grid;
+  grid-template-columns: 99px 1fr;
   padding-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    max-width: 291px;
+    grid-template-columns: 98px 1fr;
+    padding-top: 12px;
   }
 
   @media (min-width: $desktop-width) {
     @include grid-padding-desktop();
     max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
 .week-product__option {
-  width: 35%;
-  line-height: $line-height--middle;
+  grid-column: 1/2;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  padding-right: 10px;
+  border-bottom: 1px solid $basic-ultra-light;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 6px;
+    padding-bottom: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .week-product__value {
   @include reset-indent();
-  width: 65%;
-  flex-grow: 1;
-  line-height: $line-height--middle;
+  grid-column: 2/-1;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  padding-right: 10px;
+  border-bottom: 1px solid $basic-ultra-light;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 5px;
+    padding-bottom: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .week-product__wrapper {
@@ -172,7 +238,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
 

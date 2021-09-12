@@ -1,16 +1,18 @@
 .page-header {
-  min-height: 79px;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  min-height: 78px;
   border-bottom: 1px solid $basic-ultra-light;
-
-  @media (min-width: $desktop-width) {
-    min-height: 99px;
-  }
 }
 
 .page-header__container {
-  @include site-container();
   @include site-padding();
+  @include site-container();
+  display: grid;
+  grid-template-rows: minmax(78px, 1fr);
   position: relative;
+  min-height: 78px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: minmax(89px, 1fr);
+    min-height: 89px;
+  }
 }
