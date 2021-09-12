@@ -34,7 +34,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 0 0;
+  object-position: center;
   top: 0;
   left: 0;
 }
@@ -42,7 +42,7 @@
 .product__inner {
   display: flex;
   flex-direction: column;
-  min-height: 177px;
+  min-height: 180px;
   padding: 0 28px;
   border: 1px solid $basic-ultra-light;
 
@@ -73,8 +73,8 @@
 .product__title {
   @include reset-indent();
   @include font-heading($font-size--basic, $line-height--basic);
-  padding-top: 27px;
-  padding-bottom: 6px;
+  padding-top: 29px;
+  padding-bottom: 5px;
   word-wrap: break-word;
 
   &:hover,
@@ -116,9 +116,10 @@
   display: flex;
   justify-content: space-between;
   margin-top: auto;
-  padding-top: 10px;
+  padding-top: 23px;
   padding-bottom: 20px;
-  border-top: 1px solid $basic-ultra-light;
+  // border-top: 1px solid $basic-ultra-light;
+  border-top: 1px solid #000999;
 
   // @media (min-width: $tablet-width) {
   //   padding-top: 23px;
@@ -136,17 +137,17 @@
 
 .product__button {
   @include reset-indent();
-  display: inline-block;
+  display: block;
   border: none;
   background-color: transparent;
-  vertical-align: middle;
-  margin-right: -2px;
+  padding-bottom: 7px;
+  padding-left: 5px;
 }
 
 
 .product__icon {
-  width: 21px;
-  height: 18px;
+  width: 20px;
+  height: 19px;
   fill: $basic-black-20a;
 
   &:hover,

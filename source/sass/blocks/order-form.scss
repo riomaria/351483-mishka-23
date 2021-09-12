@@ -18,7 +18,7 @@
   @include site-padding();
   @include font-basic($font-size--petty);
   min-width: 260px;
-  padding-bottom: 18px;
+  padding-bottom: 14px;
 
   @media (min-width: $tablet-width) {
     @include font-basic($font-size--basic, $line-height--large);
@@ -36,8 +36,8 @@
   @include font-accent();
   width: 100%;
   position: relative;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  // padding-top: 13px;
+  // padding-bottom: 13px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
