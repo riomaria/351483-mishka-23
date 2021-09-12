@@ -12,7 +12,4 @@
       menuList.classList.toggle('main-navigation__list--open');
       menuUserList.classList.toggle('main-navigation__user-list--open');
     });
-
   })();
-
-
