@@ -1,3 +1,105 @@
 .modal {
   display: none;
+  position: fixed;
+  top: 110px;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  min-width: 320px;
+  max-width: 566px;
+  margin: auto;
+  background-color: $basic-white;
+  padding-top: 28px;
+  padding-bottom: 46px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid $basic-ultra-light;
+  box-shadow: 0 5px 10px $basic-shadowy--25a;
+}
+
+.modal__form {
+  margin: 0 auto;
+}
+
+.modal__title {
+  @include reset-indent();
+  @include font-heading();
+  min-width: 70%;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    @include font-heading($font-size--colossal, $line-height--huge);
+  }
+}
+
+.modal__info {
+  @include reset-indent();
+  @include font-basic($font-size--small, $line-height--large);
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    @include font-heading($font-size--basic, $line-height--large);
+  }
+}
+
+.modal__inner {
+  display: flex;
+  justify-content: center;
+}
+
+.modal__label {
+  @include reset-indent();
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  width: 82px;
+  height: 52px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 22px;
+  padding-right: 22px;
+  margin-right: 5px;
+  border: 1px solid #000000;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-right: 5px;
+    width: 80px;
+    box-sizing: border-box;
+    height: 49px;
+  }
+}
+
+.modal__checkbox:checked + .modal__label::before {
+  border-color: #000999;
+  background-color: #999900;
+}
+
+.modal__button {
+  @include reset-indent();
+  @include font-heading($font-size--basic, $line-height--petty, $basic-white);
+  display: block;
+  margin: 0 auto;
+  min-width: 260px;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  // padding-left: 20px;
+  // padding-right: 20px;
+  background-color: $basic-accent;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
 }

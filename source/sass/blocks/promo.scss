@@ -12,31 +12,18 @@
       content: "";
       width: 100%;
       height: 24px;
-      bottom: -14px;
+      bottom: -10px;
       left: 0;
       background-image: url("../img/zigzag-fill-24.svg");
-      background-repeat-x: repeat;
     }
 
     @media (min-width: $desktop-width) {
-      background-image: url("../img/zigzag-fill-34.svg");
       height: 34px;
+      bottom: -15px;
+      background-image: url("../img/zigzag-fill-34.svg");
     }
   }
 }
-
-// .promo::after {
-//   @media (min-width: $tablet-width) {
-//     position: absolute;
-//     content: "";
-//     width: 100%;
-//     height: 24px;
-//     bottom: -14px;
-//     left: 0;
-//     background-image: url("../img/zigzag-fill-desktop.svg");
-//     background-repeat-x: repeat;
-//   }
-// }
 
 .promo__container {
   @include site-container();
@@ -110,13 +97,18 @@
   @include font-heading($font-size--moderate, $line-height--basic, $basic-white);
   display: block;
   position: relative;
-  min-height: 100px;
-  padding: 23px 30px 18px 30px;
+  min-height: 103px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  padding-right: 30px;
+  padding-left: 30px;
 
   @media (min-width: $tablet-width) {
     @include font-heading($font-size--large, $line-height--large, $basic-white);
     width: 50%;
-    padding: 30px 36px 30px 36px;
+    padding-top: 25px;
+    padding-left: 35px;
+    padding-bottom: 35px;
   }
 }
 
@@ -146,35 +138,18 @@
   }
 }
 
-// .promo__interior:hover,
-// .promo__interior:focus {
-//   background-color: $accent-light;
-// }
-
-// .promo__toys:hover,
-// .promo__toys:focus {
-//   background-color: $accent-dark;
-// }
-
-// .promo__interior:active {
-//   background-color: $accent-light;
-// }
-
-// .promo__toys:active {
-//   background-color: $accent-dark;
-// }
-
 .promo__interior::after,
 .promo__toys::after {
   position: absolute;
   content: "";
   background-repeat: no-repeat;
   opacity: 50%;
-  top: 15px;
+  top: 20px;
   right: 25px;
 
   @media (min-width: $tablet-width) {
-    top: 22px;
+    top: 30px;
+    right: 25px;
   }
 }
 
@@ -188,6 +163,10 @@
   width: 60px;
   height: 60px;
   background-image: url("../img/icons/icon-toy.svg");
+
+  @media (min-width: $tablet-width) {
+    right: 35px;
+  }
 }
 
 .promo__interior:hover::after,

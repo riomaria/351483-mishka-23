@@ -3,6 +3,9 @@
   width: 86px;
   height: 35px;
   margin: 0 auto;
+  margin-top: 23px;
+  z-index: 1;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -14,20 +17,25 @@
   }
 
   @media (min-width: $tablet-width) {
+    justify-self: start;
     width: 113px;
     height: 46px;
+    margin: 0;
+    margin-top: 21px;
   }
 
   @media (min-width: $desktop-width) {
+    justify-self: center;
     width: 149px;
     height: 72px;
+    margin-top: 10px;
   }
 }
 
 .logo-header__img {
+  display: block;
   width: 86px;
   height: 35px;
-  display: block;
 
   @media (min-width: $tablet-width) {
     width: 113px;

@@ -1,3 +1,36 @@
 .basket {
-  display: none;
+  @media (min-width: $tablet-width) {
+    min-width: 265px;
+    padding-top: 10px;
+    border-left: 1px solid $basic-ultra-light;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 267px;
+    margin-top: -1px;
+    padding-top: 0;
+  }
+}
+
+.basket__link {
+  position: relative;
+  display: block;
+}
+
+.basket__icon {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  fill: $basic-black-20a;
+
+  @media (min-width: $tablet-width) {
+    top: 25px;
+    left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 35px;
+    left: 30px;
+  }
 }
