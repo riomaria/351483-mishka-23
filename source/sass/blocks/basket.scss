@@ -1,7 +1,7 @@
 .basket {
   @media (min-width: $tablet-width) {
     min-width: 265px;
-    padding-top: 10px;
+    padding-top: 13px;
     border-left: 1px solid $basic-ultra-light;
     text-align: right;
   }
@@ -10,12 +10,22 @@
     min-width: 267px;
     margin-top: -1px;
     padding-top: 0;
+    padding-right: 1px;
   }
 }
 
 .basket__link {
   position: relative;
   display: block;
+}
+
+.basket__link:hover .basket__icon,
+.basket__link:focus .basket__icon {
+  fill: $basic-accent;
+}
+
+.basket__link:active .basket__icon {
+  fill: $basic-accent-30a;
 }
 
 .basket__icon {
@@ -25,7 +35,7 @@
   fill: $basic-black-20a;
 
   @media (min-width: $tablet-width) {
-    top: 25px;
+    top: 22px;
     left: 30px;
   }
 

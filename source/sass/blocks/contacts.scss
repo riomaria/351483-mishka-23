@@ -109,10 +109,8 @@
 
 .contacts__link--underline {
   position: relative;
-
-  @media (min-width: $tablet-width) {
-    padding-right: 10px;
-  }
+  display: inline-block;
+  vertical-align: top;
 }
 
 .contacts__link--underline::after {
@@ -120,18 +118,22 @@
   content: "";
   bottom: 3px;
   left: 0;
-  width: 170px;
+  width: 100%;
   height: 1px;
   background-color: $accent-ultra-light;
 
   @media (min-width: $tablet-width) {
     bottom: 0;
-    width: 205px;
   }
 
   @media (min-width: $desktop-width) {
     bottom: -4px;
   }
+}
+
+.contacts__link--underline:hover::after {
+  background-color: $accent-dark;
+  color: $accent-dark;
 }
 
 .contacts__map {

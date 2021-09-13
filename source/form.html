@@ -16,7 +16,7 @@
       html {
         background-repeat: no-repeat;
         background-position: 50% 0;
-        background-image: url("img/form-mobile.jpg");
+        background-image: url("img/menu-mobile.jpg");
       }
 
       @media (min-width: 768px) {
@@ -35,7 +35,7 @@
 
       /* Делаем слой с разметкой полупрозрачным */
       body {
-        opacity: 0.2;
+        opacity: 0.4;
       }
     </style> -->
   </head>
@@ -187,7 +187,7 @@
                 <span class="order-form__subtitle">Тел</span>
               </h3>
               <p class="user-phone__item">
-                <input class="user-phone__text" type="phone" name="user-phone" id="phone-number" placeholder="+7 xxx xxx xx xx*" required>
+                <input class="user-phone__text" type="tel" name="user-phone" id="phone-number" placeholder="+7 xxx xxx xx xx*" required>
                 <label class="visually-hidden" for="phone-number">Ваш телефон</label>
               </p>
             </div>
@@ -244,21 +244,21 @@
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="#" aria-label="Instagram">
-                  <svg class="social__icon" width="22" height="21" role="img">
+                  <svg class="social__icon" width="22" height="21" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-inst"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
-                  <svg class="social__icon" width="15" height="28" role="img">
+                  <svg class="social__icon" width="15" height="28" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="#" aria-label="Twitter">
-                  <svg class="social__icon" width="23" height="20" role="img">
+                  <svg class="social__icon" width="23" height="20" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-tw"></use>
                   </svg>
                 </a>

@@ -18,7 +18,7 @@
   @include site-padding();
   @include font-basic($font-size--petty);
   min-width: 260px;
-  padding-bottom: 18px;
+  padding-bottom: 14px;
 
   @media (min-width: $tablet-width) {
     @include font-basic($font-size--basic, $line-height--large);
@@ -36,8 +36,8 @@
   @include font-accent();
   width: 100%;
   position: relative;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  // padding-top: 13px;
+  // padding-bottom: 13px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
@@ -76,7 +76,7 @@
 }
 
 .order-form input[type="text"],
-.order-form input[type="phone"],
+.order-form input[type="tel"],
 .order-form input[type="email"],
 .order-form textarea {
   @include reset-indent();
@@ -106,14 +106,29 @@
   border-top: 2px solid $basic-dark;
   border-right: 2px solid $basic-dark;
   border-left: 2px solid $basic-dark;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $accent-ultra-light;
+  }
+
+  &:active {
+    border: 2px solid $accent-ultra-light;
+  }
 }
 
 .order-form input[type="text"]:hover,
 .order-form input[type="text"]:focus,
-.order-form input[type="phone"]:hover,
-.order-form input[type="phone"]:focus,
+.order-form input[type="tel"]:hover,
+.order-form input[type="tel"]:focus,
 .order-form input[type="email"]:hover,
 .order-form input[type="email"]:focus {
+  border-bottom-color: $accent-ultra-light;
+}
+
+.order-form input[type="text"]:active,
+.order-form input[type="tel"]:active,
+.order-form input[type="email"]:active {
   border-bottom-color: $accent-ultra-light;
 }
 
