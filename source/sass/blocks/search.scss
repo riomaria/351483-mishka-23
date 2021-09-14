@@ -22,18 +22,22 @@
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    top: 10px;
-    left: 0;
-    padding-top: 26px;
-    padding-bottom: 25px;
-    padding-left: 35px;
-    padding-right: 30px;
-  }
-
-  @media (min-width: $desktop-width) {
+    top: 0;
     left: -2px;
-    padding-top: 25px;
+    padding-top: 35px;
+    padding-bottom: 31px;
+    padding-left: 35px;
+    padding-right: 31px;
   }
+}
+
+.search__button:hover .search__icon,
+.search__button:focus .search__icon {
+  fill: $basic-accent;
+}
+
+.search__button:active .search__icon {
+  fill: $basic-accent-30a;
 }
 
 .search__icon {
@@ -54,14 +58,23 @@
 
   &:hover,
   &:focus {
-    opacity: 0.6;
+    color: $basic-black-60a;
   }
 
   &:active {
-    opacity: 0.3;
+    color: $basic-black-30a;
   }
 
   @media (min-width: $tablet-width) {
     display: none;
   }
+}
+
+.search__title:hover + .search__button .search__icon,
+.search__title:focus + .search__button .search__icon {
+  fill: $basic-accent;
+}
+
+.search__title:active + .search__button .search__icon {
+  fill: $basic-accent-30a;
 }

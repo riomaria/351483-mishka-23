@@ -2,6 +2,7 @@
   @media (min-width: $desktop-width) {
     @include reset-list();
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -25,7 +26,6 @@
     @include font-heading($font-size--small, $line-height--basic);
     display: block;
     padding-top: 20px;
-    padding-bottom: 20px;
 
     &:hover,
     &:focus {

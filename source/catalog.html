@@ -12,24 +12,25 @@
 
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <!-- <style>
       html {
         background-repeat: no-repeat;
-        background-position: 50% 70px;
+        background-position: 50% 0;
         background-image: url("img/catalog-mobile.jpg");
       }
 
       @media (min-width: 768px) {
         html {
-          background-position: 50% 60px;
+          background-position: 50% 0;
           background-image: url("img/catalog-tablet.jpg");
         }
       }
 
       @media (min-width: 1050px) {
         html {
-          background-position: 50% 60px;
+          background-position: 50% 0;
           background-image: url("img/catalog-desktop.jpg");
         }
       }
@@ -52,9 +53,9 @@
         </a>
         <nav class="main-navigation">
           <button class="main-navigation__button  main-navigation__button--open" type="button" aria-expanded="false" aria-controls="main-menu">
-            <svg class="main-navigation__icon" aria-hidden="true" width="20" height="14" role="img">
-              <use class="main-navigation__icon--close" xlink:href="img/sprite.svg#icon-menu"></use>
-              <use class="main-navigation__icon--open" xlink:href="img/sprite.svg#icon-cross"></use>
+            <svg class="main-navigation__pic" aria-hidden="true" width="20" height="14" role="img">
+              <use class="main-navigation__icon main-navigation__icon--close" xlink:href="img/sprite.svg#icon-menu"></use>
+              <use class="main-navigation__icon main-navigation__icon--open" xlink:href="img/sprite.svg#icon-cross"></use>
             </svg>
           </button>
           <ul class="main-navigation__list main-navigation__list--open" id="main-menu">
@@ -193,7 +194,7 @@
                       <dd class="product__value">30 см</dd>
                     </dl>
                     <div class="product__box">
-                      <p class="product__price">1500 <span class="product__currency">руб.</span></p>
+                      <p class="product__price">1 500 <span class="product__currency">руб.</span></p>
                       <button class="product__button" type="button" aria-label="Добавить в корзину">
                         <svg class="product__icon" width="21" height="18" role="img">
                           <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -245,21 +246,21 @@
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="#" aria-label="Instagram">
-                  <svg class="social__icon" width="22" height="21" role="img">
+                  <svg class="social__icon" width="22" height="21" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-inst"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
-                  <svg class="social__icon" width="15" height="28" role="img">
+                  <svg class="social__icon" width="15" height="28" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="#" aria-label="Twitter">
-                  <svg class="social__icon" width="23" height="20" role="img">
+                  <svg class="social__icon" width="23" height="20" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-tw"></use>
                   </svg>
                 </a>
@@ -273,7 +274,7 @@
               <span class="production__text">Разработано</span>
               <a class="production__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
                 <svg class="production__logo" width="27" height="34" role="img">
-                  <use xlink:href="img/sprite.svg#logo-academy"></use>
+                  <use xlink:href="img/sprite.svg#icon-academy"></use>
                 </svg>
               </a>
             </p>
@@ -282,7 +283,7 @@
       </div>
     </footer>
 
-    <section class="modal">
+    <!-- <section class="modal">
       <form class="modal__form" id="add-size" method="get" action="https://echo.htmlacademy.ru">
         <h2 class="modal__title">Добавить в корзину</h2>
         <p class="modal__info">Выберете размер:</p>
@@ -296,7 +297,7 @@
         </div>
         <button class="modal__button" type="submit">Добавить</button>
       </form>
-    </section>
+    </section> -->
 
     <script src="js/header-menu.js"></script>
   </body>

@@ -1,16 +1,18 @@
 .type-product__wrapper {
   @include site-container();
   @include site-padding();
-  margin-bottom: 18px;
+  padding-bottom: 4px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: $padding-left--tablet 1fr;
+    padding-bottom: 0;
     margin-bottom: 25px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: $padding-left--desktop 1fr;
+    margin-bottom: 22px;
   }
 }
 
@@ -19,24 +21,26 @@
   position: relative;
   min-height: 40px;
   max-width: 355px;
-  margin-top: 13px;
+  margin-bottom: 8px;
   user-select: none;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     grid-column: 2/-1;
     min-height: 53px;
-    padding-top: 5px;
     margin-bottom: 22px;
-    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
   }
 }
 
 .type-product__radio-box + .type-product__title::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 2px;
+  left: -1px;
+  top: 4px;
   height: 41px;
   width: 41px;
   border: 2px solid $basic-black;
@@ -50,14 +54,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    left: 1px;
+    top: -2px;
+    left: 0;
   }
 }
 
 .type-product__radio-box:checked + .type-product__title::after {
   position: absolute;
   content: "";
-  top: 15px;
+  top: 16px;
   left: 12px;
   height: 17px;
   width: 17px;
@@ -72,8 +77,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 15px;
-    left: 17px;
+    top: 14px;
+    left: 15px;
   }
 }
 
@@ -89,17 +94,21 @@
 .type-product__title {
   @include font-form($font-size--basic);
   display: block;
-  padding-top: 10px;
+  padding-top: 9px;
+  padding-bottom: 7px;
   padding-left: 60px;
   padding-right: 12px;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     @include font-form();
+    padding-top: 16px;
+    padding-bottom: 10px;
     padding-left: 80px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 14px;
     padding-left: 80px;
   }
 }
