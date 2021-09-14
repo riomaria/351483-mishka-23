@@ -1,4 +1,5 @@
 /* Viewports */
+
 $tablet-width: 768px;
 $desktop-width: 1150px;
 $mobile-width-only: 767px;
@@ -7,6 +8,7 @@ $mobile-width-only: 767px;
 
 $basic-white: rgba(255, 255, 255, 1);
 $basic-white-30a: rgba(255, 255, 255, 0.3);
+$basic-white-90a: rgba(255, 255, 255, 0.9);
 $basic-super-light: rgba(249, 249, 249, 1);
 $basic-medium-light: rgba(229, 229, 229, 1);
 $basic-ultra-light: rgba(236, 236, 236, 1);
@@ -14,6 +16,9 @@ $basic-light: rgba(241, 241, 241, 1);
 $basic-accent: rgba(99, 209, 187, 1);
 $basic-accent-30a: rgba(99, 209, 187, 0.3);
 $basic-dark: rgba(68, 68, 68, 1);
+$basic-dark--30a: rgba(68, 68, 68, 0.3);
+$basic-shadowy: rgba(0, 1, 1, 1);
+$basic-shadowy--10a: rgba(0, 1, 1, 0.1);
 $basic-shadowy--25a: rgba(0, 1, 1, 0.25);
 $basic-black: rgba(0, 0, 0, 1);
 $basic-black-20a: rgba(0, 0, 0, 0.2);
@@ -21,6 +26,7 @@ $basic-black-30a: rgba(0, 0, 0, 0.3);
 $basic-black-60a: rgba(0, 0, 0, 0.6);
 
 /* Special color */
+
 $accent-ultra-light: rgba(98, 209, 186, 1);
 $accent-light: rgba(89, 213, 188, 1);
 $accent-medium: rgba(86, 195, 178, 1);
@@ -60,12 +66,15 @@ $line-height--big: 50px;
 $line-height--huge: 57px;
 
 /* Font styles */
+
 $weight-normal: 400;
 $weight-bold: 700;
 $style-normal: normal;
 
 /* Grid paddings */
+
 $inner-padding--big: 175px;
 $padding-left--tablet: 167px;
 $padding-left--desktop: 176px;
-$padding-right--desktop: 174px;
+$margin-right--desktop: 174px;
+// $padding-right--desktop: 174px; /*вывести и убрать*/

@@ -6,13 +6,13 @@
     display: grid;
     grid-template-columns: $padding-left--tablet 1fr;
     padding-top: 50px;
-    padding-bottom: 25px;
+    padding-bottom: 26px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: $padding-left--desktop 1fr;
-    padding-bottom: 22px;
-    padding-top: 50px;
+    padding-bottom: 26px;
+    padding-top: 51px;
   }
 }
 
@@ -29,7 +29,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: $padding-right--desktop;
+    margin-bottom: 24px;
+    margin-right: $margin-right--desktop;
   }
 }
 
@@ -38,7 +39,13 @@
 
   @media (min-width: $tablet-width) {
     @include font-form();
+    margin-top: -1px;
     margin-right: 24px;
     align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -4px;
+    margin-right: 24px;
   }
 }

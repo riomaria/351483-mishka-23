@@ -98,22 +98,17 @@
 
 .contacts__link {
   @include font-basic($font-size--little, $line-height--large);
-  display: block;
-  text-decoration: none;
-
-  @media (min-width: $tablet-width) {
-    @include font-basic($font-size--basic, $line-height--large);
-    grid-template-columns: auto 1fr auto 1fr;
-  }
-}
-
-.contacts__link--underline {
+  @include reset-style-link();
   position: relative;
   display: inline-block;
   vertical-align: top;
+
+  @media (min-width: $tablet-width) {
+    @include font-basic($font-size--basic, $line-height--large);
+  }
 }
 
-.contacts__link--underline::after {
+.contacts__link::after {
   position: absolute;
   content: "";
   bottom: 3px;
@@ -131,9 +126,18 @@
   }
 }
 
-.contacts__link--underline:hover::after {
-  background-color: $accent-dark;
+.contacts__link:hover,
+.contacts__link:focus {
   color: $accent-dark;
+}
+
+.contacts__link:hover::after,
+.contacts__link:focus::after {
+  background-color: $accent-dark;
+}
+
+.contacts__link:active::after {
+  background-color: $accent-dark-10a;
 }
 
 .contacts__map {

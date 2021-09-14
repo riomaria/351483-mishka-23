@@ -39,7 +39,15 @@
   font-style: $style;
 }
 
-@mixin font-heading-basic ($size: $font-size--basic, $line-height: $line-height--basic, $color: $basic-black, $weight: $weight-bold, $style: $style-normal) {
+@mixin font-heading-basic ($size: $font-size--basic, $line-height: $line-height--middle, $color: $basic-dark, $weight: $weight-bold, $style: $style-normal) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin font-button-basic ($size: $font-size--big, $line-height: $line-height--large, $color: $basic-black, $weight: $weight-bold, $style: $style-normal) {
   font-size: $size;
   line-height: $line-height;
   color: $color;

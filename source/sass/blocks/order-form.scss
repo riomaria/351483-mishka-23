@@ -3,7 +3,7 @@
   padding-bottom: 55px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 57px;
+    padding-top: 55px;
     padding-bottom: 50px;
   }
 
@@ -37,12 +37,12 @@
   width: 100%;
   position: relative;
   // padding-top: 13px;
-  // padding-bottom: 13px;
+  margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
-    padding-top: 17px;
-    padding-bottom: 15px;
+    // padding-top: 17px;
+    padding-bottom: 0;
   }
 }
 
@@ -84,6 +84,7 @@
   width: 100%;
   padding-top: 15px;
   padding-bottom: 13px;
+  padding-right: 40px;
   border: none;
   border-bottom: 2px solid $basic-dark;
 
@@ -92,7 +93,7 @@
     padding-top: 13px;
     padding-bottom: 10px;
     padding-left: 18px;
-    padding-right: 15px;
+    padding-right: 50px;
   }
 
   @media (min-width: $desktop-width) {
@@ -157,25 +158,42 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 2/-1;
-    padding-right: $padding-right--desktop;
+    margin-right: $margin-right--desktop;
   }
 }
 
 .order-form__footnote {
   @include reset-indent();
+  position: relative;
   margin-bottom: 30px;
+  padding-left: 8px;
 
   @media (min-width: $tablet-width) {
-    position: relative;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 3px;
+    padding-left: 6px;
   }
 }
 
 .order-form__icon-asterisk {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  display: block;
+  font-size: $font-size--little;
+
   @media (min-width: $tablet-width) {
-    position: absolute;
+    font-size: $font-size--basic;
     top: 15px;
-    left: -10px;
+    left: -2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 18px;
+    left: -4px;
   }
 }
 
@@ -186,7 +204,5 @@
     order: -1;
     width: 230px;
     max-width: 350px;
-    padding-top: 0;
-    padding-bottom: 0;
   }
 }

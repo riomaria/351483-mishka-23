@@ -166,7 +166,7 @@
   }
 }
 
-.main-navigation__icon {
+.main-navigation__pic {
   width: 21px;
   height: 20px;
   fill: $basic-black;
@@ -221,3 +221,10 @@
     justify-self: start;
   }
 }
+
+// .main-navigation--no-js {
+//   @media (max-width: $mobile-width-only) {
+//     display: block;
+//     position: static;
+//   }
+// }
