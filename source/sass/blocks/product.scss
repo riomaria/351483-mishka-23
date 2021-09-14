@@ -5,6 +5,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
+    min-height: 660px;
   }
 }
 
@@ -118,8 +119,7 @@
   margin-top: auto;
   padding-top: 23px;
   padding-bottom: 20px;
-  // border-top: 1px solid $basic-ultra-light;
-  border-top: 1px solid #000999;
+  border-top: 1px solid $basic-ultra-light;
 
   // @media (min-width: $tablet-width) {
   //   padding-top: 23px;
