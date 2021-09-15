@@ -1,13 +1,9 @@
 .user-email {
-  margin-top: -2px;
+  margin-top: -1px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
     background-color: $basic-light;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-top: -3px;
   }
 }
 
@@ -18,12 +14,13 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: $padding-left--tablet 1fr;
-    padding-bottom: 40px;
+    padding-top: 25px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: $padding-left--desktop 1fr;
-    padding-bottom: 42px;
+    padding-bottom: 50px;
   }
 }
 
@@ -67,12 +64,11 @@
   fill: $basic-black-20a;
 
   @media (min-width: $tablet-width) {
-    bottom: 23px;
+    bottom: 15px;
     right: 23px;
   }
 
   @media (min-width: $desktop-width) {
-    bottom: 24px;
     right: 5px;
   }
 }

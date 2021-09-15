@@ -13,6 +13,31 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <style>
+      /* Используем &lt;html> как слой с макетами */
+      html {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-image: url("img/form-mobile.jpg");
+      }
+
+      @media (min-width: 768px) {
+        html {
+          background-image: url("img/form-tablet.jpg");
+        }
+      }
+
+      @media (min-width: 1150px) {
+        html {
+          background-image: url("img/form-desktop.jpg");
+        }
+      }
+
+      /* Делаем слой с разметкой полупрозрачным */
+      body {
+        opacity: 0.3;
+      }
+    </style> -->
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -38,7 +63,6 @@
               <use class="main-navigation__icon--open" xlink:href="img/sprite.svg#icon-cross"></use>
             </svg>
           </button> -->
-
           <ul class="main-navigation__list main-navigation__list--open" id="main-menu">
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
@@ -270,7 +294,7 @@
       </div>
     </footer>
 
-    <script src="js/header-menu.min.js"></script>
-
+    <!-- <script src="js/header-menu.min.js"></script> -->
+    <script src="js/header-menu.js"></script>
   </body>
 </html>
