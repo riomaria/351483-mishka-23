@@ -9,9 +9,9 @@
     <link rel="icon" href="img/favicons/152.svg" type="image/svg+xml"><!--152x152-->
     <link rel="apple-touch-icon" href="favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/normalize.min.css">
+    <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- <style>
+    <style>
       /* Используем &lt;html> как слой с макетами */
       html {
         background-repeat: no-repeat;
@@ -35,7 +35,7 @@
       body {
         opacity: 0.2;
       }
-    </style> -->
+    </style>
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -47,14 +47,14 @@
             <img class="logo-header__img" src="img/logo/logo-header-mobile.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
           </picture>
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation main-navigation--no-js">
           <button class="main-navigation__button  main-navigation__button--open" type="button" aria-expanded="false" aria-controls="main-menu">
             <svg class="main-navigation__pic" aria-hidden="true" width="20" height="14" role="img">
               <use class="main-navigation__icon main-navigation__icon--close" xlink:href="img/sprite.svg#icon-menu"></use>
               <use class="main-navigation__icon main-navigation__icon--open" xlink:href="img/sprite.svg#icon-cross"></use>
             </svg>
           </button>
-          <ul class="main-navigation__list main-navigation__list--open" id="main-menu">
+          <ul class="main-navigation__list main-navigation__list--open main-navigation__list--no-js" id="main-menu">
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -62,7 +62,7 @@
               <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-navigation__user-list main-navigation__user-list--open">
+          <ul class="main-navigation__user-list main-navigation__user-list--open main-navigation__user-list--no-js">
             <li class="main-navigation__item search">
               <form class="search__form" id="search-form" method="get" action="https://echo.htmlacademy.ru">
                 <input class="visually-hidden" type="search" name="user-query" aria-label="Поиск" id="user-search" placeholder="Поиск по сайту">
@@ -83,14 +83,14 @@
               </a>
             </li>
           </ul>
-          <!-- <ul class="main-navigation__add-part add-part">
+          <ul class="main-navigation__add-part add-part">
             <li class="add-part__item">
               <a class="add-part__link" href="#">Новые поступления</a>
             </li>
             <li class="add-part__item">
               <a class="add-part__link" href="#">Распродажа</a>
             </li>
-          </ul> -->
+          </ul>
           <div class="main-navigation__footnote">Бесплатная доставка по России</div>
         </nav>
       </div>
@@ -310,7 +310,6 @@
       <button class="visually-hidden" type="button">Закрыть</button>
     </section>
 
-    <!-- <script src="js/header-menu.min.js"></script> -->
-    <script src="js/header-menu.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

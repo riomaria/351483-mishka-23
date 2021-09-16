@@ -102,6 +102,28 @@
   }
 }
 
+.main-navigation--no-js {
+  @media (max-width: $mobile-width-only) {
+    position: static;
+    border-top: 1px solid $basic-ultra-light;
+    padding-top: 0;
+  }
+}
+
+.main-navigation__list--no-js,
+.main-navigation__user-list--no-js {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+    // padding: 0;
+  }
+}
+
+.main-navigation--no-js .main-navigation__button {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
 .main-navigation__item {
   cursor: pointer;
 

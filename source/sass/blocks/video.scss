@@ -38,11 +38,11 @@
 
 .video__title {
   @include reset-indent();
-  @include font-heading-basic();
+  @include font-heading-basic($font-size--basic, $line-height--basic);
   position: relative;
-  padding-top: 21px;
+  padding-top: 23px;
   padding-bottom: 26px;
-  padding-left: 87px;
+  padding-left: 89px;
   padding-right: 30px;
   text-align: left;
   box-sizing: border-box;
@@ -52,16 +52,18 @@
     content: "";
     width: 32px;
     height: 22px;
-    top: 28%;
-    left: 30px;
+    top: 36%;
+    left: 34px;
     background-image: url("../img/icons/icon-video.svg");
     background-repeat: no-repeat;
   }
 
   @media (min-width: $tablet-width) {
+    @include font-heading-basic($font-size--large, $line-height--basic);
     padding-top: 40px;
     padding-bottom: 25px;
     padding-right: 40px;
+    padding-left: 105px;
     border-right: 1px solid $basic-ultra-light;
     border-left: 1px solid $basic-ultra-light;
     border-top: 1px solid $basic-ultra-light;
@@ -74,14 +76,14 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 100px;
-    right: 105px;
+    top: 95px;
+    right: 106px;
     width: 180px;
     border: none;
     padding: 0;
 
     &::before {
-      top: -35px;
+      top: -50px;
       left: 0;
     }
   }
@@ -103,7 +105,6 @@
 
   @media (min-width: $desktop-width) {
     width: 683px;
-    height: auto;
   }
 }
 
@@ -114,7 +115,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 0 0;
+  object-position: center;
   top: 0;
   left: 0;
 }
@@ -148,12 +149,13 @@
 .video__inner {
   padding-top: 35px;
   padding-bottom: 33px;
-  padding-left: 34px;
-  padding-right: 34px;
+  padding-left: 33px;
+  padding-right: 32px;
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
     padding-bottom: 45px;
+    padding-left: 40px;
     padding-right: 40px;
     border-bottom: 1px solid $basic-ultra-light;
     border-right: 1px solid $basic-ultra-light;
@@ -161,11 +163,12 @@
   }
 
   @media (min-width: $desktop-width) {
+    min-height: 455px;
     max-width: 30%;
     padding-top: 172px;
-    padding-bottom: 60px;
-    padding-left: 80px;
-    padding-right: 40px;
+    padding-bottom: 0;
+    padding-left: 79px;
+    padding-right: 5px;
     border: none;
   }
 }
@@ -174,9 +177,10 @@
   @include reset-indent();
   @include font-basic($font-size--petty);
   padding-bottom: 41px;
+  text-align: left;
 
   @media (min-width: $tablet-width) {
-    text-align: left;
+    @include font-basic($font-size--small, $line-height--large);
   }
 
   @media (min-width: $desktop-width) {

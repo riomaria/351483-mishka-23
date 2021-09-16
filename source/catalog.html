@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
 
-    <link rel="stylesheet" href="css/normalize.min.css">
+    <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <style>
@@ -49,14 +49,14 @@
             <img class="logo-header__img" src="img/logo/logo-header-mobile.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
           </picture>
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation main-navigation--no-js">
           <button class="main-navigation__button  main-navigation__button--open" type="button" aria-expanded="false" aria-controls="main-menu">
             <svg class="main-navigation__pic" aria-hidden="true" width="20" height="14" role="img">
               <use class="main-navigation__icon main-navigation__icon--close" xlink:href="img/sprite.svg#icon-menu"></use>
               <use class="main-navigation__icon main-navigation__icon--open" xlink:href="img/sprite.svg#icon-cross"></use>
             </svg>
           </button>
-          <ul class="main-navigation__list main-navigation__list--open" id="main-menu">
+          <ul class="main-navigation__list main-navigation__list--open main-navigation__list--no-js" id="main-menu">
             <li class="main-navigation__item">
               <a class="main-navigation__link">Каталог товаров</a>
             </li>
@@ -64,7 +64,7 @@
               <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-navigation__user-list main-navigation__user-list--open">
+          <ul class="main-navigation__user-list main-navigation__user-list--open main-navigation__user-list--no-js">
             <li class="main-navigation__item search">
               <form class="search__form" id="search-form" method="get" action="https://echo.htmlacademy.ru">
                 <input class="visually-hidden" type="search" name="user-query" aria-label="Поиск" id="user-search" placeholder="Поиск по сайту">
@@ -96,6 +96,7 @@
           <div class="main-navigation__footnote">Бесплатная доставка по России</div>
         </nav>
       </div>
+      <script src="js/header-menu.js"></script>
     </header>
 
     <main class="page-main">
@@ -130,7 +131,7 @@
                       <dd class="product__value">200 г</dd>
                     </dl>
                     <div class="product__box">
-                      <p class="product__price">1200 <span class="product__currency">руб.</span></p>
+                      <p class="product__price">1 200 <span class="product__currency">руб.</span></p>
                       <button class="product__button" type="button" aria-label="Добавить в корзину">
                         <svg class="product__icon" width="21" height="18" role="img">
                           <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -183,7 +184,7 @@
                   </a>
                   <div class="product__inner">
                     <a class="product__link" href="#">
-                      <h3 class="product__title">Большая корзинка для игрушек</h3>
+                      <h3 class="product__title">Большая корзинка  для игрушек</h3>
                     </a>
                     <dl class="product__info">
                       <dt class="product__option">Диаметр</dt>
@@ -216,7 +217,7 @@
                   <source media="(min-width: 768px)" srcset="img/video/video-tablet.jpg 1x, img/video/video-tablet@2x.jpg 2x">
                   <img class="video__img" src="img/video/video-mobile.jpg" srcset="img/video/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видеоролик о нашем производстве">
                 </picture>
-                <button class="video__button" type="button">Начать воспроизведение</button>
+                <button class="video__button" type="button" aria-label="Кнопка &laquo;Начать воспроизведение&raquo;">Включить/Выключить</button>
               </div>
               <div class="video__inner">
                 <p class="video__info">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -297,7 +298,6 @@
       </form>
     </section>
 
-    <!-- <script src="js/header-menu.min.js"></script> -->
-    <script src="js/header-menu.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
