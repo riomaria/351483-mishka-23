@@ -20,6 +20,11 @@
     @media (min-width: $desktop-width) {
       height: 34px;
       bottom: -15px;
+      background-image: url("../img/zigzag-index-34.svg");
+      background-position: 0 0;
+    }
+
+    @media (min-width: 1160px) {
       background-image: url("../img/zigzag-fill-34.svg");
     }
   }
@@ -118,6 +123,10 @@
   &:hover,
   &:focus {
     background-color: $accent-light;
+
+    @media (min-width: $tablet-width) {
+      margin-top: -5px;
+    }
   }
 
   &:active {
@@ -131,6 +140,10 @@
   &:hover,
   &:focus {
     background-color: $accent-dark;
+
+    @media (min-width: $tablet-width) {
+      margin-top: -5px;
+    }
   }
 
   &:active {
@@ -157,12 +170,14 @@
   width: 51px;
   height: 62px;
   background-image: url("../img/icons/icon-interior.svg");
+  opacity: 50%;
 }
 
 .promo__toys::after {
   width: 60px;
   height: 60px;
   background-image: url("../img/icons/icon-toy.svg");
+  opacity: 50%;
 
   @media (min-width: $tablet-width) {
     right: 35px;

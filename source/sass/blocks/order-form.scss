@@ -201,7 +201,10 @@
 }
 
 .order-form__button {
+  @include button-basic();
+  @include font-button-basic();
   width: 100%;
+  font-size: $font-size--basic;
 
   @media (min-width: $tablet-width) {
     order: -1;

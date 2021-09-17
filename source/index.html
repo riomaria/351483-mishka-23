@@ -11,7 +11,7 @@
     <link rel="manifest" href="manifest.webmanifest">
     <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
-    <style>
+    <!-- <style>
       /* Используем &lt;html> как слой с макетами */
       html {
         background-repeat: no-repeat;
@@ -35,7 +35,7 @@
       body {
         opacity: 0.2;
       }
-    </style>
+    </style> -->
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -130,12 +130,19 @@
               <dd class="week-product__value">15 см</dd>
             </dl>
             <div class="week-product__wrapper">
-              <img class="week-product__img" src="img/catalog/knitted-baskets-mobile.jpg" width="260"
-              height="315" alt="Три корзинки разных размеров">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px" srcset="img/catalog/knitted-baskets-desktop.webp 1x, img/catalog/knitted-baskets-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/knitted-baskets-tablet.webp 1x, img/catalog/knitted-baskets-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/knitted-baskets-mobile.webp 1x, img/catalog/knitted-baskets-mobile@2x.webp 2x">
+                <source media="(min-width: 1150px)" srcset="img/catalog/knitted-baskets-desktop.jpg 1x, img/catalog/knitted-baskets-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/knitted-baskets-tablet.jpg 1x, img/catalog/knitted-baskets-tablet@2x.jpg 2x">
+                <img class="week-product__img" src="img/catalog/knitted-baskets-mobile.jpg" srcset="img/catalog/knitted-baskets-mobile@2x.jpg 2x" width="260"
+                height="315" alt="Три корзинки разных размеров">
+              </picture>
             </div>
             <div class="week-product__order">
               <p class="week-product__price">Цена:
-                <span class="week-product__currency">990 руб.</span>
+               <span class="week-product__currency">990 руб.</span>
               </p>
               <button class="week-product__button button" type="button">Заказать</button>
             </div>
@@ -154,7 +161,7 @@
               <div class="features__text">Скандинавский стиль по российской цене</div>
             </li>
             <li class="features__item features__item--heart">
-              <div class="features__text">Увеличивает лайки на фотографиях</div>
+              <div class="features__text">Увеличивает лайки<br> на фотографиях</div>
             </li>
             <li class="features__item features__item--skein">
               <div class="features__text features__text--skein">Связано вручную<br> с любовью и умилением</div>
