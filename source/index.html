@@ -9,33 +9,9 @@
     <link rel="icon" href="img/favicons/152.svg" type="image/svg+xml"><!--152x152-->
     <link rel="apple-touch-icon" href="favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- <style>
-      /* Используем &lt;html> как слой с макетами */
-      html {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        background-image: url("img/index-mobile.jpg");
-      }
-
-      @media (min-width: 768px) {
-        html {
-          background-image: url("img/index-tablet.jpg");
-        }
-      }
-
-      @media (min-width: 1150px) {
-        html {
-          background-image: url("img/index-desktop.jpg");
-        }
-      }
-
-      /* Делаем слой с разметкой полупрозрачным */
-      body {
-        opacity: 0.2;
-      }
-    </style> -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -131,7 +107,7 @@
             </dl>
             <div class="week-product__wrapper">
               <picture>
-                <source type="image/webp" media="(min-width: 1150px" srcset="img/catalog/knitted-baskets-desktop.webp 1x, img/catalog/knitted-baskets-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/knitted-baskets-desktop.webp 1x, img/catalog/knitted-baskets-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/knitted-baskets-tablet.webp 1x, img/catalog/knitted-baskets-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/catalog/knitted-baskets-mobile.webp 1x, img/catalog/knitted-baskets-mobile@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/catalog/knitted-baskets-desktop.jpg 1x, img/catalog/knitted-baskets-desktop@2x.jpg 2x">
@@ -141,10 +117,8 @@
               </picture>
             </div>
             <div class="week-product__order">
-              <p class="week-product__price">Цена:
-               <span class="week-product__currency">990 руб.</span>
-              </p>
-              <button class="week-product__button button" type="button">Заказать</button>
+              <p class="week-product__price">Цена: <span class="week-product__currency">990 руб.</span></p>
+              <button class="week-product__button button button__order" type="button">Заказать</button>
             </div>
           </div>
         </div>
@@ -300,21 +274,23 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <form class="modal__form" id="add-size" method="get" action="https://echo.htmlacademy.ru">
-        <h2 class="modal__title">Добавить в корзину</h2>
-        <p class="modal__info">Выберите размер:</p>
-        <div class="modal__inner">
-          <input class="visually-hidden modal__checkbox" type="checkbox" name="size-small" value="small" id="size-S" checked>
-          <label class="modal__label" for="size-S">S</label>
-          <input class="visually-hidden modal__checkbox" type="checkbox" name="size-middle" value="middle" id="size-M">
-          <label class="modal__label" for="size-M">M</label>
-          <input class="visually-hidden modal__checkbox" type="checkbox" name="size-large" value="large" id="size-L">
-          <label class="modal__label" for="size-L">L</label>
-        </div>
-        <button class="modal__button" type="submit">Добавить</button>
-      </form>
-      <button class="visually-hidden" type="button">Закрыть</button>
+    <section class="modal modal--closed">
+      <div class="modal__order">
+        <form class="modal__form" id="add-size" method="get" action="https://echo.htmlacademy.ru">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <p class="modal__info">Выберите размер:</p>
+          <div class="modal__inner">
+            <input class="visually-hidden modal__checkbox" type="checkbox" name="size-small" value="small" id="size-S" checked>
+            <label class="modal__label" for="size-S">S</label>
+            <input class="visually-hidden modal__checkbox" type="checkbox" name="size-middle" value="middle" id="size-M">
+            <label class="modal__label" for="size-M">M</label>
+            <input class="visually-hidden modal__checkbox" type="checkbox" name="size-large" value="large" id="size-L">
+            <label class="modal__label" for="size-L">L</label>
+          </div>
+          <button class="modal__button" type="submit">Добавить</button>
+        </form>
+        <button class="visually-hidden" type="button">Закрыть</button>
+      </div>
     </section>
 
     <script src="js/script.min.js"></script>

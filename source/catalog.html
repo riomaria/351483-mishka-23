@@ -10,34 +10,9 @@
     <link rel="apple-touch-icon" href="favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
 
-    <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-      /* Используем &lt;html> как слой с макетами */
-      html {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        background-image: url("img/catalog-mobile.jpg");
-      }
-
-      @media (min-width: 768px) {
-        html {
-          background-image: url("img/catalog-tablet.jpg");
-        }
-      }
-
-      @media (min-width: 1150px) {
-        html {
-          background-image: url("img/catalog-desktop.jpg");
-        }
-      }
-
-      /* Делаем слой с разметкой полупрозрачным */
-      body {
-        opacity: 0.2;
-      }
-    </style>
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -136,7 +111,7 @@
                     </dl>
                     <div class="product__box">
                       <p class="product__price">1 200 <span class="product__currency">руб.</span></p>
-                      <button class="product__button" type="button" aria-label="Добавить в корзину">
+                      <button class="product__button button__order" type="button" aria-label="Добавить в корзину">
                         <svg class="product__icon" width="21" height="18" role="img">
                           <use xlink:href="img/sprite.svg#icon-cart"></use>
                         </svg>
@@ -171,7 +146,7 @@
                     </dl>
                     <div class="product__box">
                       <p class="product__price">690 <span class="product__currency">руб.</span></p>
-                      <button class="product__button" type="button" aria-label="Добавить в корзину">
+                      <button class="product__button button__order" type="button" aria-label="Добавить в корзину">
                         <svg class="product__icon" width="21" height="18" role="img">
                           <use xlink:href="img/sprite.svg#icon-cart"></use>
                         </svg>
@@ -206,7 +181,7 @@
                     </dl>
                     <div class="product__box">
                       <p class="product__price">1 500 <span class="product__currency">руб.</span></p>
-                      <button class="product__button" type="button" aria-label="Добавить в корзину">
+                      <button class="product__button button__order" type="button" aria-label="Добавить в корзину">
                         <svg class="product__icon" width="21" height="18" role="img">
                           <use xlink:href="img/sprite.svg#icon-cart"></use>
                         </svg>
@@ -298,20 +273,23 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <form class="modal__form" id="add-size" method="get" action="https://echo.htmlacademy.ru">
-        <h2 class="modal__title">Добавить в корзину</h2>
-        <p class="modal__info">Выберете размер:</p>
-        <div class="modal__inner">
-          <label class="modal__suttitle" for="size-S">S</label>
-          <input class="modal__item" type="checkbox" name="size-small" value="small" id="size-S" checked>
-          <label class="modal__suttitle" for="size-M">M</label>
-          <input class="modal__item" type="checkbox" name="size-middle" value="middle" id="size-M">
-          <label class="modal__suttitle" for="size-L">L</label>
-          <input class="modal__item" type="checkbox" name="size-large" value="large" id="size-L">
-        </div>
-        <button class="modal__button" type="submit">Добавить</button>
-      </form>
+    <section class="modal modal--closed">
+      <div class="modal__order">
+        <form class="modal__form" id="add-size" method="get" action="https://echo.htmlacademy.ru">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <p class="modal__info">Выберите размер:</p>
+          <div class="modal__inner">
+            <input class="visually-hidden modal__checkbox" type="checkbox" name="size-small" value="small" id="size-S" checked>
+            <label class="modal__label" for="size-S">S</label>
+            <input class="visually-hidden modal__checkbox" type="checkbox" name="size-middle" value="middle" id="size-M">
+            <label class="modal__label" for="size-M">M</label>
+            <input class="visually-hidden modal__checkbox" type="checkbox" name="size-large" value="large" id="size-L">
+            <label class="modal__label" for="size-L">L</label>
+          </div>
+          <button class="modal__button" type="submit">Добавить</button>
+        </form>
+        <button class="visually-hidden" type="button">Закрыть</button>
+      </div>
     </section>
 
     <script src="js/script.min.js"></script>

@@ -1,4 +1,6 @@
 
+/* Main-navigation */
+
 (() => {
 
 const menuButton = document.querySelector('.main-navigation__button');
