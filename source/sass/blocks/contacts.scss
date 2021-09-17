@@ -3,7 +3,7 @@
   padding-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 75px;
+    padding-top: 73px;
     padding-bottom: 52px;
   }
 
@@ -42,7 +42,7 @@
   @media (min-width: $tablet-width) {
     @include font-heading($font-size--huge, $line-height--big);
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 49px;
   }
 
   @media (min-width: $desktop-width) {
@@ -172,6 +172,9 @@
 .contacts__inner {
   @include site-padding();
   @include site-container();
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 
   @media (min-width: $desktop-width) {
     position: absolute;
@@ -186,6 +189,5 @@
   @media (min-width: $tablet-width) {
     width: 230px;
     max-width: 400px;
-    margin: 0 auto;
   }
 }

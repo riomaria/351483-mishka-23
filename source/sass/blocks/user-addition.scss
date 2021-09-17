@@ -1,3 +1,11 @@
+.user-addition {
+  margin-top: -1px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
 .user-addition__wrapper {
   @include site-container();
   @include site-padding();
@@ -31,7 +39,7 @@
 }
 
 .user-addition__text {
-  @include reset-indent();
+  // @include reset-indent();
   border: 2px solid $basic-black;
   min-height: 142px;
   min-width: 100%;

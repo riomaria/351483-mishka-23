@@ -15,12 +15,12 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: $padding-left--tablet 1fr;
-    padding-top: 48px;
+    margin-bottom: 0;
+    padding-top: 50px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: $padding-left--desktop 1fr;
-    padding-top: 50px;
   }
 }
 
@@ -31,8 +31,7 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 2/-1;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 3px;
   }
 
   @media (min-width: $desktop-width) {
@@ -66,12 +65,11 @@
   fill: $basic-black-20a;
 
   @media (min-width: $tablet-width) {
-    bottom: 23px;
+    bottom: 18px;
     right: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    bottom: 24px;
     right: 10px;
   }
 }
