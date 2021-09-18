@@ -19,18 +19,3 @@
   menuUserList.classList.toggle('main-navigation__user-list--close');
   });
   })();
-
-  /* Modal */
-
-  const orderButton = document.querySelector('.button__order');
-  const orderModal = document.querySelector('.modal');
-
-  orderButton.addEventListener('click', function () {
-    if (orderModal.classList.contains('modal--closed')) {
-      orderModal.classList.remove('modal--closed');
-      orderModal.classList.add('modal--opened');
-    } else {
-      orderModal.classList.add('modal--closed');
-      orderModal.classList.remove('modal--opened');
-    }
-  });
