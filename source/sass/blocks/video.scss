@@ -190,7 +190,8 @@
 
 .video__order-button {
   @include font-heading($font-size--middle);
-  width: 100%;
+  display: inline-block;
+  min-width: 100%;
 
   @media (min-width: $tablet-width) {
     @include font-heading();
