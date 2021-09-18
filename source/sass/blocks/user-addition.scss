@@ -1,12 +1,21 @@
+.user-addition {
+  margin-top: -1px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
 .user-addition__wrapper {
   @include site-container();
   @include site-padding();
-  padding-bottom: 11px;
+  padding-top: 20px;
+  padding-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: $padding-left--tablet 1fr;
-    padding-top: 50px;
+    padding-top: 54px;
     padding-bottom: 47px;
   }
 
@@ -18,19 +27,19 @@
 
 .user-addition__item {
   @include reset-indent();
-  margin-top: 10px;
+  margin-top: -5px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 0;
+    margin-top: -3px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: $padding-right--desktop;
+    margin-right: $margin-right--desktop;
   }
 }
 
 .user-addition__text {
-  @include reset-indent();
+  // @include reset-indent();
   border: 2px solid $basic-black;
   min-height: 142px;
   min-width: 100%;

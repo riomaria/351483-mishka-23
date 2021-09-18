@@ -4,7 +4,6 @@
 }
 
 .page-header__container {
-  @include site-padding();
   @include site-container();
   display: grid;
   grid-template-rows: minmax(78px, 1fr);
@@ -12,6 +11,7 @@
   min-height: 78px;
 
   @media (min-width: $tablet-width) {
+    @include site-padding();
     grid-template-rows: minmax(89px, 1fr);
     min-height: 89px;
   }

@@ -3,20 +3,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 21px;
   padding-bottom: 16px;
+  min-height: 45px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
 .production__text {
   @include font-heading($font-size--moderate, $line-height--small);
   display: block;
-  padding-right: 25px;
+  padding-bottom: 5px;
+  padding-right: 27px;
+  align-self: center;
 
   @media (min-width: $desktop-width) {
     padding-right: 30px;
@@ -25,12 +28,12 @@
 
 .production__link {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: end;
+  justify-self: flex-end;
 }
 
 .production__logo {
   fill: $basic-accent;
-  justify-self: flex-end;
 
   &:hover,
   &:focus {

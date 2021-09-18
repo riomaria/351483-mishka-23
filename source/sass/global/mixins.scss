@@ -39,7 +39,15 @@
   font-style: $style;
 }
 
-@mixin font-heading-basic ($size: $font-size--basic, $line-height: $line-height--basic, $color: $basic-black, $weight: $weight-bold, $style: $style-normal) {
+@mixin font-heading-basic ($size: $font-size--basic, $line-height: $line-height--middle, $color: $basic-dark, $weight: $weight-bold, $style: $style-normal) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin font-button-basic ($size: $font-size--big, $line-height: $line-height--petty, $color: $basic-black, $weight: $weight-bold, $style: $style-normal) {
   font-size: $size;
   line-height: $line-height;
   color: $color;
@@ -103,4 +111,33 @@
 
 @mixin grid-padding-desktop() {
   padding-left: $inner-padding--big;
+}
+
+@mixin button-basic {
+  display: inline-block;
+  min-width: 175px;
+  padding-top: 17px;
+  padding-bottom: 14px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: $basic-white;
+  border: 2px solid $basic-dark;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-dark;
+    color: $basic-white;
+  }
+
+  &:active {
+    color: $basic-white-30a;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 19px;
+  }
 }

@@ -9,36 +9,9 @@
     <link rel="icon" href="img/favicons/152.svg" type="image/svg+xml"><!--152x152-->
     <link rel="apple-touch-icon" href="favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- <style>
-      html {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        background-image: url("img/index-mobile.jpg");
-      }
-
-      @media (min-width: 768px) {
-        html {
-          background-position: 50% 0;
-          background-image: url("img/index-tablet.jpg");
-        }
-      }
-
-      @media (min-width: 1050px) {
-        html {
-          background-position: 50% 0;
-          background-image: url("img/index-desktop.jpg");
-        }
-      }
-
-      /* Делаем слой с разметкой полупрозрачным */
-      body {
-        opacity: 0.4;
-      }
-    </style> -->
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -50,14 +23,14 @@
             <img class="logo-header__img" src="img/logo/logo-header-mobile.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
           </picture>
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation main-navigation--no-js">
           <button class="main-navigation__button  main-navigation__button--open" type="button" aria-expanded="false" aria-controls="main-menu">
-            <svg class="main-navigation__icon" aria-hidden="true" width="20" height="14" role="img">
-              <use class="main-navigation__icon--close" xlink:href="img/sprite.svg#icon-menu"></use>
-              <use class="main-navigation__icon--open" xlink:href="img/sprite.svg#icon-cross"></use>
+            <svg class="main-navigation__pic" aria-hidden="true" width="20" height="14" role="img">
+              <use class="main-navigation__icon main-navigation__icon--close" xlink:href="img/sprite.svg#icon-menu"></use>
+              <use class="main-navigation__icon main-navigation__icon--open" xlink:href="img/sprite.svg#icon-cross"></use>
             </svg>
           </button>
-          <ul class="main-navigation__list main-navigation__list--open" id="main-menu">
+          <ul class="main-navigation__list main-navigation__list--open main-navigation__list--no-js" id="main-menu">
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -65,7 +38,7 @@
               <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-navigation__user-list main-navigation__user-list--open">
+          <ul class="main-navigation__user-list main-navigation__user-list--open main-navigation__user-list--no-js">
             <li class="main-navigation__item search">
               <form class="search__form" id="search-form" method="get" action="https://echo.htmlacademy.ru">
                 <input class="visually-hidden" type="search" name="user-query" aria-label="Поиск" id="user-search" placeholder="Поиск по сайту">
@@ -133,14 +106,19 @@
               <dd class="week-product__value">15 см</dd>
             </dl>
             <div class="week-product__wrapper">
-              <img class="week-product__img" src="img/catalog/knitted-baskets-mobile.jpg" width="260"
-              height="315" alt="Три корзинки разных размеров">
+              <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/knitted-baskets-desktop.webp 1x, img/catalog/knitted-baskets-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/knitted-baskets-tablet.webp 1x, img/catalog/knitted-baskets-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog/knitted-baskets-mobile.webp 1x, img/catalog/knitted-baskets-mobile@2x.webp 2x">
+                <source media="(min-width: 1150px)" srcset="img/catalog/knitted-baskets-desktop.jpg 1x, img/catalog/knitted-baskets-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/knitted-baskets-tablet.jpg 1x, img/catalog/knitted-baskets-tablet@2x.jpg 2x">
+                <img class="week-product__img" src="img/catalog/knitted-baskets-mobile.jpg" srcset="img/catalog/knitted-baskets-mobile@2x.jpg 2x" width="260"
+                height="315" alt="Три корзинки разных размеров">
+              </picture>
             </div>
             <div class="week-product__order">
-              <p class="week-product__price">Цена:
-                <span class="week-product__currency">990 руб.</span>
-              </p>
-              <button class="week-product__button button" type="button">Заказать</button>
+              <p class="week-product__price">Цена: <span class="week-product__currency">990 руб.</span></p>
+              <button class="week-product__button button button__order" type="button">Заказать</button>
             </div>
           </div>
         </div>
@@ -157,7 +135,7 @@
               <div class="features__text">Скандинавский стиль по российской цене</div>
             </li>
             <li class="features__item features__item--heart">
-              <div class="features__text">Увеличивает лайки на фотографиях</div>
+              <div class="features__text">Увеличивает лайки<br> на фотографиях</div>
             </li>
             <li class="features__item features__item--skein">
               <div class="features__text features__text--skein">Связано вручную<br> с любовью и умилением</div>
@@ -222,7 +200,7 @@
             <dl class="contacts__list">
               <dt class="contacts__item">e-mail:</dt>
               <dd class="contacts__subitem">
-                <a class="contacts__link contacts__link--underline" href="mailto:@info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+                <a class="contacts__link" href="mailto:@info@mimimishkashop.ru">info@mimimishkashop.ru</a>
               </dd>
               <dt class="contacts__item">адрес:</dt>
               <dd class="contacts__subitem">
@@ -233,7 +211,7 @@
             </dl>
           </div>
           <div class="contacts__map">
-            <iframe class="contacts__iframe" src="https://yandex.ru/map-widget/v1/-/CCUQi-hl0A" width="320" height="454" alt="Местоположение на карте интернет-магазина &laquo;Мишка&raquo;" allowfullscreen="true"></iframe>
+            <iframe class="contacts__iframe" src="https://yandex.ru/map-widget/v1/-/CCUQi-hl0A" width="320" height="454" aria-label="Местоположение на карте интернет-магазина &laquo;Мишка&raquo;"></iframe>
           </div>
           <div class="contacts__inner">
             <a class="contacts__button button" href="#">Напишите нам</a>
@@ -259,21 +237,21 @@
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="#" aria-label="Instagram">
-                  <svg class="social__icon" width="22" height="21" role="img">
+                  <svg class="social__icon" width="22" height="21" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-inst"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
-                  <svg class="social__icon" width="15" height="28" role="img">
+                  <svg class="social__icon" width="15" height="28" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="#" aria-label="Twitter">
-                  <svg class="social__icon" width="23" height="20" role="img">
+                  <svg class="social__icon" width="23" height="20" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-tw"></use>
                   </svg>
                 </a>
@@ -287,7 +265,7 @@
               <span class="production__text">Разработано</span>
               <a class="production__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
                 <svg class="production__logo" width="27" height="34" role="img">
-                  <use xlink:href="img/sprite.svg#logo-academy"></use>
+                  <use xlink:href="img/sprite.svg#icon-academy"></use>
                 </svg>
               </a>
             </p>
@@ -296,22 +274,25 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <form class="modal__form" id="add-size" method="get" action="https://echo.htmlacademy.ru">
-        <h2 class="modal__title">Добавить в корзину</h2>
-        <p class="modal__info">Выберете размер:</p>
-        <div class="modal__inner">
-          <label class="modal__label" for="size-S">S</label>
-          <input class="visually-hidden modal__checkbox" type="checkbox" name="size-small" value="small" id="size-S" checked>
-          <label class="modal__label" for="size-M">M</label>
-          <input class="visually-hidden modal__checkbox" type="checkbox" name="size-middle" value="middle" id="size-M">
-          <label class="modal__label" for="size-L">L</label>
-          <input class="visually-hidden modal__checkbox" type="checkbox" name="size-large" value="large" id="size-L">
-        </div>
-        <button class="modal__button" type="submit">Добавить</button>
-      </form>
+    <section class="modal modal--closed">
+      <div class="modal__order">
+        <form class="modal__form" id="add-size" method="get" action="https://echo.htmlacademy.ru">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <p class="modal__info">Выберите размер:</p>
+          <div class="modal__inner">
+            <input class="visually-hidden modal__checkbox" type="checkbox" name="size-small" value="small" id="size-S" checked>
+            <label class="modal__label" for="size-S">S</label>
+            <input class="visually-hidden modal__checkbox" type="checkbox" name="size-middle" value="middle" id="size-M">
+            <label class="modal__label" for="size-M">M</label>
+            <input class="visually-hidden modal__checkbox" type="checkbox" name="size-large" value="large" id="size-L">
+            <label class="modal__label" for="size-L">L</label>
+          </div>
+          <button class="modal__button" type="submit">Добавить</button>
+        </form>
+        <button class="visually-hidden" type="button">Закрыть</button>
+      </div>
     </section>
 
-    <script src="js/header-menu.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

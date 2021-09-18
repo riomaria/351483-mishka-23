@@ -11,33 +11,8 @@
     <link rel="manifest" href="manifest.webmanifest">
 
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-      html {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        background-image: url("img/form-mobile.jpg");
-      }
-
-      @media (min-width: 768px) {
-        html {
-          background-position: 50% 0;
-          background-image: url("img/form-tablet.jpg");
-        }
-      }
-
-      @media (min-width: 1050px) {
-        html {
-          background-position: 50% 0;
-          background-image: url("img/form-desktop.jpg");
-        }
-      }
-
-      /* Делаем слой с разметкой полупрозрачным */
-      body {
-        opacity: 0.2;
-      }
-    </style>
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -49,14 +24,14 @@
             <img class="logo-header__img" src="img/logo/logo-header-mobile.svg" width="86" height="35" alt="Логотип магазина &laquo;Мишка&raquo;">
           </picture>
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation main-navigation--no-js">
           <button class="main-navigation__button  main-navigation__button--open" type="button" aria-expanded="false" aria-controls="main-menu">
-            <svg class="main-navigation__icon" aria-hidden="true" width="20" height="14" role="img">
-              <use class="main-navigation__icon--close" xlink:href="img/sprite.svg#icon-menu"></use>
-              <use class="main-navigation__icon--open" xlink:href="img/sprite.svg#icon-cross"></use>
+            <svg class="main-navigation__pic" aria-hidden="true" width="20" height="14" role="img">
+              <use class="main-navigation__icon main-navigation__icon--close" xlink:href="img/sprite.svg#icon-menu"></use>
+              <use class="main-navigation__icon main-navigation__icon--open" xlink:href="img/sprite.svg#icon-cross"></use>
             </svg>
           </button>
-          <ul class="main-navigation__list main-navigation__list--open" id="main-menu">
+          <ul class="main-navigation__list main-navigation__list--open main-navigation__list--no-js" id="main-menu">
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="catalog.html">Каталог товаров</a>
             </li>
@@ -64,7 +39,7 @@
               <a class="main-navigation__link">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-navigation__user-list main-navigation__user-list--open">
+          <ul class="main-navigation__user-list main-navigation__user-list--open main-navigation__user-list--no-js">
             <li class="main-navigation__item search">
               <form class="search__form" id="search-form" method="get" action="https://echo.htmlacademy.ru">
                 <input class="visually-hidden" type="search" name="user-query" aria-label="Поиск" id="user-search" placeholder="Поиск по сайту">
@@ -187,8 +162,11 @@
                 <span class="order-form__subtitle">Тел</span>
               </h3>
               <p class="user-phone__item">
-                <input class="user-phone__text" type="phone" name="user-phone" id="phone-number" placeholder="+7 xxx xxx xx xx*" required>
+                <input class="user-phone__text" type="tel" name="user-phone" id="phone-number" placeholder="+7 xxx xxx xx xx*" required>
                 <label class="visually-hidden" for="phone-number">Ваш телефон</label>
+                <svg class="user-phone__icon" width="25" height="24" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
               </p>
             </div>
           </fieldset>
@@ -201,6 +179,9 @@
               <p class="user-email__item">
                 <input class="user-email__text" type="email" name="user-email" id="email-address" placeholder="Ваш Email*" required>
                 <label class="visually-hidden" for="email-address">Ваш E-mail адрес</label>
+                <svg class="user-email__icon" width="32" height="21" aria-hidden="true" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
               </p>
             </div>
           </fieldset>
@@ -211,8 +192,8 @@
                 <span class="order-form__subtitle">Доп</span>
               </h3>
               <p class="user-addition__item">
-                <textarea class="user-addition__text" name="user-addition" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-                <label class="visually-hidden">Дополнительные пожелания</label>
+                <textarea class="user-addition__text" name="user-addition" id="user-add-wish" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <label class="visually-hidden" for="user-add-wish">Дополнительные пожелания</label>
               </p>
             </div>
           </fieldset>
@@ -220,7 +201,7 @@
           <div class="order-form__footer">
             <div class="order-form__inner">
               <p class="order-form__footnote"><sup class="order-form__icon-asterisk">*</sup>Поля обязательны для заполнения</p>
-              <button class="order-form__button button" type="submit">Отправить заказ</button>
+              <button class="order-form__button" type="submit">Отправить заказ</button>
             </div>
           </div>
         </form>
@@ -244,21 +225,21 @@
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="#" aria-label="Instagram">
-                  <svg class="social__icon" width="22" height="21" role="img">
+                  <svg class="social__icon" width="22" height="21" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-inst"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
-                  <svg class="social__icon" width="15" height="28" role="img">
+                  <svg class="social__icon" width="15" height="28" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--instagram" href="#" aria-label="Twitter">
-                  <svg class="social__icon" width="23" height="20" role="img">
+                  <svg class="social__icon" width="23" height="20" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-tw"></use>
                   </svg>
                 </a>
@@ -272,7 +253,7 @@
               <span class="production__text">Разработано</span>
               <a class="production__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
                 <svg class="production__logo" width="27" height="34" role="img">
-                  <use xlink:href="img/sprite.svg#logo-academy"></use>
+                  <use xlink:href="img/sprite.svg#icon-academy"></use>
                 </svg>
               </a>
             </p>
@@ -281,7 +262,6 @@
       </div>
     </footer>
 
-    <script src="js/header-menu.js"></script>
-
+    <script src="js/script.min.js"></script>
   </body>
 </html>

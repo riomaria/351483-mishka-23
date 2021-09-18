@@ -1,5 +1,8 @@
 .user-email {
+  margin-top: -1px;
+
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     background-color: $basic-light;
   }
 }
@@ -11,33 +14,61 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: $padding-left--tablet 1fr;
-    padding-bottom: 29px;
+    padding-top: 25px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: $padding-left--desktop 1fr;
-    padding-bottom: 27px;
+    padding-bottom: 50px;
   }
 }
 
 .user-email__item {
   @include reset-indent();
-  margin-top: -6px;
-  margin-bottom: 22px;
+  position: relative;
+  margin-top: -19px;
+  // margin-top: -6px;
+  // margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     grid-column: 2/-1;
-    display: flex;
+    // display: flex;
     margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: $padding-right--desktop;
+    margin-right: $margin-right--desktop;
   }
+}
+
+.user-email__item:hover .user-email__icon,
+.user-email__item:focus .user-email__icon,
+.user-email__item:active .user-email__icon {
+  fill: $accent-ultra-light;
 }
 
 .user-email__text {
   @media (min-width: $tablet-width) {
     background-color: $basic-light;
+  }
+}
+
+.user-email__icon {
+  position: absolute;
+  content: "";
+  bottom: 12px;
+  right: 3px;
+  width: 32;
+  height: 21px;
+  fill: $basic-black-20a;
+
+  @media (min-width: $tablet-width) {
+    bottom: 15px;
+    right: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 5px;
   }
 }
