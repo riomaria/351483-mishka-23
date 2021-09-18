@@ -10,9 +10,7 @@
     <link rel="apple-touch-icon" href="favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
 
-    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="page__body">
@@ -26,13 +24,13 @@
           </picture>
         </a>
         <nav class="main-navigation main-navigation--no-js">
-          <button class="main-navigation__button  main-navigation__button--open" type="button" aria-expanded="false" aria-controls="main-menu">
+          <button class="main-navigation__button  main-navigation__button--close" type="button" aria-expanded="false" aria-controls="main-menu">
             <svg class="main-navigation__pic" aria-hidden="true" width="20" height="14" role="img">
               <use class="main-navigation__icon main-navigation__icon--close" xlink:href="img/sprite.svg#icon-menu"></use>
               <use class="main-navigation__icon main-navigation__icon--open" xlink:href="img/sprite.svg#icon-cross"></use>
             </svg>
           </button>
-          <ul class="main-navigation__list main-navigation__list--open main-navigation__list--no-js" id="main-menu">
+          <ul class="main-navigation__list main-navigation__list--close main-navigation__list--no-js" id="main-menu">
             <li class="main-navigation__item">
               <a class="main-navigation__link">Каталог товаров</a>
             </li>
@@ -40,7 +38,7 @@
               <a class="main-navigation__link" href="form.html">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-navigation__user-list main-navigation__user-list--open main-navigation__user-list--no-js">
+          <ul class="main-navigation__user-list main-navigation__user-list--close main-navigation__user-list--no-js">
             <li class="main-navigation__item search">
               <form class="search__form" id="search-form" method="get" action="https://echo.htmlacademy.ru">
                 <input class="visually-hidden" type="search" name="user-query" aria-label="Поиск" id="user-search" placeholder="Поиск по сайту">
@@ -72,7 +70,6 @@
           <div class="main-navigation__footnote">Бесплатная доставка по России</div>
         </nav>
       </div>
-      <script src="js/header-menu.js"></script>
     </header>
 
     <main class="page-main">
