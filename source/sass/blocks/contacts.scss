@@ -1,15 +1,15 @@
 .contacts {
-  padding-top: 40px;
+  padding-top: 39px;
   padding-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 73px;
-    padding-bottom: 52px;
+    padding-top: 75px;
+    padding-bottom: 53px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 69px;
-    padding-bottom: 105px;
+    padding-bottom: 107px;
   }
 }
 
@@ -152,7 +152,7 @@
 
   @media (min-width: $tablet-width) {
     height: 457px;
-    margin-bottom: 55px;
+    margin-bottom: 57px;
     background-image: url("../img/map/map-tablet.jpg");
   }
 
@@ -184,10 +184,12 @@
 }
 
 .contacts__button {
-  width: 100%;
+  display: block;
+  min-width: 100%;
 
   @media (min-width: $tablet-width) {
-    width: 230px;
+    min-width: 230px;
     max-width: 400px;
+    display: inline-block;
   }
 }
